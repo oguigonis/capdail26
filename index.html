@@ -1,340 +1,439 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xavier Beck - Cap d'Ail 2026</title>
-    
-    <!-- Balises Méta pour le Partage Social (Open Graph & Twitter Cards) -->
-    <meta property="og:title" content="Xavier Beck 2026 : Continuons d'Avancer Ensemble à Cap d'Ail">
-    <meta property="og:description" content="Découvrez le projet 2026-2032 pour Cap d'Ail : Révolution de la Mobilité, Protection du Littoral et Sécurité 2.0.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.xavierbeck2026.fr"> <!-- À remplacer par l'URL réelle du site -->
-    <!-- Image de prévisualisation pour le partage (utiliser l'URL d'une image réelle) -->
-    <meta property="og:image" content="https://placehold.co/1200x630/172554/ffffff?text=XAVIER+BECK+2026">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@XavierBeck2026"> <!-- À remplacer par le compte X/Twitter réel -->
-    <meta name="twitter:creator" content="@XavierBeck2026">
-    
-    <!-- Chargement de Tailwind CSS pour un style moderne et responsive -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Configuration de la police Inter, pour un look professionnel */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7f9fc; /* Arrière-plan légèrement gris */
-        }
-        /* Style pour les boutons primaires (vert/bleu) */
-        .btn-primary {
-            @apply inline-block px-8 py-3 rounded-full text-white font-bold transition duration-300 ease-in-out shadow-lg hover:shadow-xl;
-        }
-        /* Nouvelle palette pour Cap d'Ail : Bleu (Méditerranée) et Or (Rayonnement) */
-        .btn-blue {
-            @apply bg-blue-700 hover:bg-blue-800;
-        }
-        .btn-gold {
-            @apply bg-yellow-500 hover:bg-yellow-600;
-        }
-        /* Style spécifique pour la section Héro */
-        #hero-section {
-            /* Mélange de bleu profond et de l'or/jaune pour un effet premium et méditerranéen */
-            background: linear-gradient(135deg, rgba(23, 37, 84, 0.95), rgba(251, 191, 36, 0.9));
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); /* Bord inférieur courbé pour l'effet */
-        }
-        /* Cache la vraie image pour utiliser un grand espace */
-        .candidate-photo {
-            min-height: 400px;
-            background-size: cover;
-            background-position: center;
-        }
-    </style>
-    <script>
-        // Fonction JavaScript pour ouvrir les fenêtres de partage
-        function sharePage(platform) {
-            const url = encodeURIComponent(window.location.href);
-            const title = encodeURIComponent(document.title);
-            let shareUrl = '';
-
-            switch (platform) {
-                case 'facebook':
-                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-                    break;
-                case 'twitter':
-                    // Note: 'text' est souvent préféré pour Twitter, car il est plus direct
-                    shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
-                    break;
-                case 'whatsapp':
-                    shareUrl = `https://api.whatsapp.com/send?text=${title}%20${url}`;
-                    break;
-                case 'linkedin':
-                    shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
-                    break;
-                default:
-                    return;
-            }
-
-            // Ouvre la fenêtre de partage dans une nouvelle petite fenêtre
-            window.open(shareUrl, '_blank', 'width=600,height=400');
-        }
-    </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.7">
+  <style type="text/css">
+    body {background-color: #f5f7fb}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6d6d6d; -webkit-text-stroke: #6d6d6d}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6b0001; -webkit-text-stroke: #6b0001}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #fb0007; -webkit-text-stroke: #fb0007}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #0000ff; -webkit-text-stroke: #0000ff}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; -webkit-text-stroke: #000000}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; -webkit-text-stroke: #000000; min-height: 16.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #4d5055; -webkit-text-stroke: #4d5055}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #18702b; -webkit-text-stroke: #18702b}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #0000ff; -webkit-text-stroke: #0000ff; background-color: #ecf1f7}
+    span.s1 {font-kerning: none; background-color: #ecf1f7}
+    span.s2 {font-kerning: none; color: #fb0007; background-color: #ecf1f7; -webkit-text-stroke: 0px #fb0007}
+    span.s3 {font-kerning: none; color: #2a2a2a; background-color: #ecf1f7; -webkit-text-stroke: 0px #2a2a2a}
+    span.s4 {font-kerning: none; color: #000000; background-color: #ecf1f7; -webkit-text-stroke: 0px #000000}
+    span.s5 {font-kerning: none; color: #0000ff; background-color: #ecf1f7; -webkit-text-stroke: 0px #0000ff}
+    span.s6 {font-kerning: none; color: #6b0001; background-color: #ecf1f7; -webkit-text-stroke: 0px #6b0001}
+    span.s7 {font-kerning: none; color: #6f0ec3; background-color: #ecf1f7; -webkit-text-stroke: 0px #6f0ec3}
+    span.s8 {font-kerning: none; color: #093c94; background-color: #ecf1f7; -webkit-text-stroke: 0px #093c94}
+    span.s9 {font-kerning: none; color: #18702b; background-color: #ecf1f7; -webkit-text-stroke: 0px #18702b}
+    span.s10 {font-kerning: none; color: #137646; background-color: #ecf1f7; -webkit-text-stroke: 0px #137646}
+    span.s11 {font-kerning: none}
+    span.s12 {font-kerning: none; color: #4d5055; background-color: #ecf1f7; -webkit-text-stroke: 0px #4d5055}
+    span.s13 {font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s14 {font-kerning: none; color: #2a2a2a; -webkit-text-stroke: 0px #2a2a2a}
+    span.s15 {font-kerning: none; color: #6b0001; -webkit-text-stroke: 0px #6b0001}
+    span.s16 {font-kerning: none; color: #fb0007; -webkit-text-stroke: 0px #fb0007}
+  </style>
 </head>
-<body class="text-gray-800">
-
-    <!-- 1. BARRE DE NAVIGATION (HEADER) -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- Logo -->
-            <div class="flex items-center space-x-2">
-                <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21.75l-6-3.75V8.25l6 3.75 6-3.75v9.75l-6 3.75zM12 2.25L6 6v12.75l6 3.75 6-3.75V6l-6-3.75z"/></svg>
-                <span class="text-xl font-extrabold text-blue-700">BECK 2026 - Cap d'Ail</span>
-            </div>
-            <!-- Menu de navigation principal -->
-            <nav class="hidden md:flex space-x-6 font-medium text-gray-600">
-                <a href="#programme" class="hover:text-blue-700 transition duration-150">Programme</a>
-                <a href="#liste-municipale" class="hover:text-blue-700 transition duration-150">L'Équipe</a>
-                <a href="#actualites" class="hover:text-blue-700 transition duration-150">Actualités</a>
-                <a href="#impliquer" class="btn-primary btn-gold px-4 py-2 text-sm">S'Impliquer</a>
-            </nav>
-            <!-- Bouton de menu mobile (à implémenter en JS) -->
-            <button class="md:hidden text-gray-600 hover:text-blue-700 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
-    </header>
-
-    <!-- 2. SECTION HÉRO (La première impression) -->
-    <section id="hero-section" class="py-16 md:py-24 text-white">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <!-- Colonne du texte et des CTA -->
-            <div class="order-2 md:order-1">
-                <p class="text-sm uppercase tracking-widest mb-2 font-light">Xavier Beck - Candidat à la Mairie de Cap d'Ail</p>
-                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6">
-                    CONTINUER D'AVANCER, <span class="text-yellow-300">ENSEMBLE.</span>
-                </h1>
-                <p class="text-xl mb-8 font-light max-w-lg">
-                    Construire le Cap d'Ail de demain : un littoral protégé, des services modernes et une qualité de vie incomparable pour tous.
-                </p>
-                <!-- Boutons d'Action (CTA) -->
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
-                    <a href="#programme" class="btn-primary btn-blue">DÉCOUVRIR LE PROJET 2026</a>
-                    <a href="#don" class="btn-primary btn-gold">SOUTENIR LA CAMPAGNE</a>
-                </div>
-
-                <!-- NOUVEAU: Boutons de Partage -->
-                <div class="flex items-center space-x-3 mt-4 text-sm">
-                    <span class="font-semibold">Partager :</span>
-                    <!-- Facebook -->
-                    <button onclick="sharePage('facebook')" class="text-white hover:text-blue-400 transition duration-150">
-                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3 8h-2v2h2v3h-3v-3h-2V9h2V7c0-1.66 1.34-3 3-3h2v3h-2c-.55 0-1 .45-1 1v1h3l-.4 3z"/></svg>
-                    </button>
-                    <!-- X / Twitter -->
-                    <button onclick="sharePage('twitter')" class="text-white hover:text-blue-400 transition duration-150">
-                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.261 8.52 11.458H16.27l-6.843-8.686L3.924 22.75H0.44l7.653-8.777L0.864 2.25h3.58l5.404 7.822 6.758-7.822h2.072zM10.746 16.326l-1.636-1.398-6.046 5.822H6.974l4.125-4.704zM16.233 7.234L14.41 5.05H8.76l1.205 1.543 5.483 7.078 1.635-1.398L16.233 7.234z"/></svg>
-                    </button>
-                    <!-- WhatsApp (utile pour mobile) -->
-                    <button onclick="sharePage('whatsapp')" class="text-white hover:text-blue-400 transition duration-150">
-                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.002 0c6.627 0 12 5.373 12 12s-5.373 12-12 12-12-5.373-12-12 5.373-12 12-12zm-2.094 17.584l-.587-1.745c-.217-.645-.296-1.3-.238-1.956.126-1.428.59-2.793 1.39-4.04l.115-.175c.196-.28.32-.596.32-.93 0-.74-.6-1.34-1.34-1.34s-1.34.6-1.34 1.34v.053l-.974.004c-.035-1.93.948-3.79 2.65-4.877 1.7-1.087 3.784-1.22 5.63-.448 1.54.64 2.83 1.8 3.53 3.32.74 1.6.76 3.42.06 5.04-.6 1.41-1.6 2.58-2.88 3.43l-.42.27c-.44.29-.9.49-1.38.64l-.39.12c-.22.06-.44.11-.66.11-.74 0-1.4-.41-1.78-1.07l-.21-.4-.69.21c-.4.12-.8.19-1.2.19-.6 0-1.18-.15-1.68-.44l-.39-.23c-.22-.12-.42-.27-.61-.45l-.42-.42zm1.688-6.19c-.58 0-1.04.46-1.04 1.04 0 .58.46 1.04 1.04 1.04s1.04-.46 1.04-1.04c0-.58-.46-1.04-1.04-1.04z"/></svg>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Colonne de la photo du Candidat -->
-            <div class="order-1 md:order-2 flex justify-center md:justify-end">
-                <!-- Placeholder pour la photo du candidat (remplacez cette URL par l'image réelle) -->
-                <img
-                    src="https://placehold.co/400x480/172554/ffffff?text=Photo+Xavier+Beck"
-                    alt="Portrait professionnel de Xavier Beck"
-                    class="rounded-xl shadow-2xl w-full max-w-xs md:max-w-sm lg:max-w-md object-cover transform hover:scale-[1.02] transition duration-300"
-                >
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. SECTION DES 3 PILIERS DU PROGRAMME (AXÉ SUR LE FUTUR) -->
-    <section id="programme" class="py-16 md:py-24 bg-white relative z-10">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Nos 3 Prochains Grands Chantiers</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Pilier 1: Mobilité et Infrastructures Futures -->
-                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="flex justify-center mb-4">
-                        <svg class="w-12 h-12 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21v-8m0 0V3m0 8h8M4 11h8m-8 0v8m8-8v8m-8 0h8m-4-4h.01"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-blue-900">1. Révolutionner la Mobilité</h3>
-                    <p class="text-gray-600">**Nous allons** déployer des navettes électriques autonomes sur le littoral et créer un réseau de pistes cyclables sécurisées vers Monaco et Nice.</p>
-                </div>
-
-                <!-- Pilier 2: Protection du Littoral et Cadre de Vie -->
-                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="flex justify-center mb-4">
-                        <svg class="w-12 h-12 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m8 8l-3-3m0 0l-3 3m3-3v3m0 0h3m-3 0h-3M3 12h18"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-yellow-700">2. Sauvegarder Notre Patrimoine</h3>
-                    <p class="text-gray-600">**Nous nous engageons à** tripler le budget de préservation des sentiers côtiers et à inaugurer un nouveau parc municipal avec vue sur la Méditerranée.</p>
-                </div>
-
-                <!-- Pilier 3: Sécurité Technologique et Proximité -->
-                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="flex justify-center mb-4">
-                        <svg class="w-12 h-12 text-indigo-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.276a1.2 1.2 0 010 1.697l-2.829 2.83M5.62 16.324l-2.83-2.83a1.2 1.2 0 010-1.697l2.829-2.83m10.82 2.83l2.83 2.83a1.2 1.2 0 010 1.697l-2.829 2.83m-4.243-4.243l-4.243-4.243m4.243 4.243l-4.243 4.243"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-indigo-800">3. Sécurité 2.0</h3>
-                    <p class="text-gray-600">**L'objectif est de** moderniser notre réseau de caméras de surveillance par IA pour une réactivité optimale et de créer des "îlots de sécurité" de proximité.</p>
-                </div>
-            </div>
-
-            <!-- Bouton vers le programme complet -->
-            <div class="text-center mt-12">
-                <a href="#programme-detail" class="text-blue-700 hover:text-blue-900 font-semibold transition duration-150 border-b-2 border-blue-700 pb-1">
-                    Découvrez le Programme Municipal Complet 2026-2032 &rarr;
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- NOUVELLE SECTION 4: LA LISTE MUNICIPALE -->
-    <section id="liste-municipale" class="py-16 md:py-24 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-4 text-blue-800">L'Équipe 2026 : Au Service de Cap d'Ail</h2>
-            <p class="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">Une équipe renouvelée, unie par l'ambition de faire progresser notre ville.</p>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
-                <!-- Membre 1 (Placeholder) -->
-                <div class="text-center bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                    <img src="https://placehold.co/120x120/007bff/ffffff?text=C1" alt="Portrait de colistier" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-yellow-500">
-                    <h3 class="text-lg font-semibold text-gray-900">Marie Dupont</h3>
-                    <p class="text-sm text-blue-600 font-medium">Spécialiste du Littoral et de l'Environnement</p>
-                </div>
-                <!-- Membre 2 (Placeholder) -->
-                <div class="text-center bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                    <img src="https://placehold.co/120x120/007bff/ffffff?text=C2" alt="Portrait de colistier" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-yellow-500">
-                    <h3 class="text-lg font-semibold text-gray-900">Jean Dubois</h3>
-                    <p class="text-sm text-blue-600 font-medium">Expert en Finances et Budget</p>
-                </div>
-                <!-- Membre 3 (Placeholder) -->
-                <div class="text-center bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                    <img src="https://placehold.co/120x120/007bff/ffffff?text=C3" alt="Portrait de colistier" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-yellow-500">
-                    <h3 class="text-lg font-semibold text-gray-900">Léa Moreau</h3>
-                    <p class="text-sm text-blue-600 font-medium">Déléguée à la Jeunesse et au Sport</p>
-                </div>
-                <!-- Membre 4 (Placeholder) -->
-                <div class="text-center bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                    <img src="https://placehold.co/120x120/007bff/ffffff?text=C4" alt="Portrait de colistier" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-yellow-500">
-                    <h3 class="text-lg font-semibold text-gray-900">Marc Lefevre</h3>
-                    <p class="text-sm text-blue-600 font-medium">Responsable de la Sécurité Urbaine</p>
-                </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <a href="#liste-complete" class="btn-primary btn-blue">Voir la liste complète des 29 colistiers</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- NOUVELLE SECTION 5: ACTUALITÉS & ÉVÉNEMENTS -->
-    <section id="actualites" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-4 text-blue-800">Actualités et Prochains Événements</h2>
-            <p class="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">Retrouvez l'agenda de la campagne et les dernières prises de position.</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Actualité / Événement 1 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-200">
-                    <img src="https://placehold.co/600x400/1e3a8a/ffffff?text=MEETING" alt="Image d'événement" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <p class="text-sm text-yellow-600 font-semibold mb-2">Événement | 15 Janvier 2026</p>
-                        <h3 class="text-xl font-bold text-blue-900 mb-3">Grand Meeting de Lancement</h3>
-                        <p class="text-gray-700 text-sm">Rendez-vous à la salle polyvalente pour la présentation officielle du projet 2026-2032 par Xavier Beck et son équipe.</p>
-                        <a href="#" class="text-blue-700 mt-4 block font-semibold hover:text-blue-900">Détails & Inscription &rarr;</a>
-                    </div>
-                </div>
-                <!-- Actualité / Événement 2 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-200">
-                    <img src="https://placehold.co/600x400/4f46e5/ffffff?text=ARTICLE" alt="Image d'événement" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <p class="text-sm text-yellow-600 font-semibold mb-2">Article | 5 Janvier 2026</p>
-                        <h3 class="text-xl font-bold text-blue-900 mb-3">Focus : Comment financer la Mobilité Verte ?</h3>
-                        <p class="text-gray-700 text-sm">Analyse détaillée des mécanismes de financement envisagés pour les nouvelles pistes cyclables et navettes.</p>
-                        <a href="#" class="text-blue-700 mt-4 block font-semibold hover:text-blue-900">Lire l'article &rarr;</a>
-                    </div>
-                </div>
-                <!-- Actualité / Événement 3 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-200">
-                    <img src="https://placehold.co/600x400/9333ea/ffffff?text=TERRAIN" alt="Image d'événement" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <p class="text-sm text-yellow-600 font-semibold mb-2">Terrain | 20 Janvier 2026</p>
-                        <h3 class="text-xl font-bold text-blue-900 mb-3">Rencontre avec les Commerçants du Port</h3>
-                        <p class="text-gray-700 text-sm">Xavier Beck et Marie Dupont iront à la rencontre des commerçants du Port pour écouter leurs préoccupations futures.</p>
-                        <a href="#" class="text-blue-700 mt-4 block font-semibold hover:text-blue-900">Plus d'infos &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION D'APPEL À L'ACTION SECONDAIRE (Impliquer) -->
-    <section id="impliquer" class="py-16 bg-blue-50">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-extrabold text-blue-800 mb-4">Votre implication est la clé du futur.</h2>
-            <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-                Participez activement à la construction de ce nouveau mandat pour que Cap d'Ail continue de rayonner.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <a href="#" class="btn-primary btn-blue">Devenir Bénévole</a>
-                <a href="#don" class="btn-primary btn-gold">Faire un Don Sécurisé</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- PIED DE PAGE (FOOTER) -->
-    <footer class="bg-gray-900 text-white py-10">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <!-- Colonne 1: Branding -->
-            <div>
-                <span class="text-2xl font-extrabold text-white">BECK 2026</span>
-                <p class="text-sm mt-2 text-gray-400">Pour un Cap d'Ail tourné vers l'excellence.</p>
-            </div>
-
-            <!-- Colonne 2: Liens rapides -->
-            <div>
-                <h4 class="text-lg font-semibold mb-3 text-yellow-500">Navigation</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li><a href="#programme" class="hover:text-white">Notre Projet Futur</a></li>
-                    <li><a href="#liste-municipale" class="hover:text-white">L'Équipe</a></li>
-                    <li><a href="#actualites" class="hover:text-white">Actualités & Meetings</a></li>
-                </ul>
-            </div>
-
-            <!-- Colonne 3: Contact et Légal -->
-            <div>
-                <h4 class="text-lg font-semibold mb-3 text-yellow-500">Informations</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li><a href="#" class="hover:text-white">Contactez-nous</a></li>
-                    <li><a href="#" class="hover:text-white">Mentions Légales</a></li>
-                    <li><a href="#" class="hover:text-white">Politique de Confidentialité</a></li>
-                </ul>
-            </div>
-
-            <!-- Colonne 4: Réseaux Sociaux -->
-            <div>
-                <h4 class="text-lg font-semibold mb-3 text-yellow-500">Suivez-nous</h4>
-                <!-- On conserve les icônes de réseaux sociaux ici pour la visibilité -->
-                <div class="flex space-x-3">
-                    <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-150">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><!-- Icône Twitter/X --><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.36 7.42c-.5.22-1.04.37-1.59.43.57-.34 1.05-.88 1.26-1.52-.53.31-1.11.53-1.74.66-.5-.53-1.22-.86-2.01-.86-1.52 0-2.75 1.23-2.75 2.75 0 .22.03.43.08.64C7.38 11.23 4.96 9.94 3.3 7.82c-.24.4-.38.86-.38 1.36 0 .95.48 1.78 1.22 2.27-.45-.02-.88-.14-1.25-.34v.03c0 1.34.95 2.47 2.2 2.72-.23.06-.47.09-.72.09-.17 0-.33-.02-.49-.05.35 1.09 1.36 1.89 2.56 1.91-1.02.8-2.31 1.28-3.72 1.28-.24 0-.47-.02-.7-.04C4.33 17.5 5.92 18 7.6 18c6.12 0 9.46-5.07 9.46-9.45 0-.14-.01-.28-.01-.42.65-.47 1.22-1.06 1.67-1.73z"/></svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-150">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><!-- Icône Facebook --><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3 8h-2v2h2v3h-3v-3h-2V9h2V7c0-1.66 1.34-3 3-3h2v3h-2c-.55 0-1 .45-1 1v1h3l-.4 3z"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="text-center text-sm text-gray-500 mt-6 border-t border-gray-800 pt-4">
-            &copy; 2024 Campagne Xavier Beck. Tous droits réservés.
-        </div>
-    </footer>
-
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s3">&lt;</span><span class="s1">html</span><span class="s4"> </span><span class="s2">lang</span><span class="s3">=</span><span class="s5">"fr"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s5">"UTF-8"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">title</span><span class="s3">&gt;</span><span class="s1">Xavier Beck - Cap d'Ail 2026</span><span class="s3">&lt;/</span><span class="s6">title</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Balises Méta pour le Partage Social (Open Graph &amp; Twitter Cards) --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">property</span><span class="s3">=</span><span class="s1">"og:title"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"Xavier Beck 2026 : Continuons d'Avancer Ensemble à Cap d'Ail"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">property</span><span class="s3">=</span><span class="s1">"og:description"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"Découvrez le projet 2026-2032 pour Cap d'Ail : Révolution de la Mobilité, Protection du Littoral et Sécurité 2.0."</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">property</span><span class="s3">=</span><span class="s1">"og:type"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"website"</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">property</span><span class="s3">=</span><span class="s5">"og:url"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s5">"https://www.xavierbeck2026.fr"</span><span class="s3">&gt;</span><span class="s4"> </span><span class="s1">&lt;!-- À remplacer par l'URL réelle du site --&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Image de prévisualisation pour le partage (utiliser l'URL d'une image réelle) --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">property</span><span class="s3">=</span><span class="s1">"og:image"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"https://placehold.co/1200x630/172554/ffffff?text=XAVIER+BECK+2026"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"twitter:card"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"summary_large_image"</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">name</span><span class="s3">=</span><span class="s5">"twitter:site"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s5">"@XavierBeck2026"</span><span class="s3">&gt;</span><span class="s4"> </span><span class="s1">&lt;!-- À remplacer par le compte X/Twitter réel --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"twitter:creator"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"@XavierBeck2026"</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Chargement de Tailwind CSS pour un style moderne et responsive --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">/* Configuration de la police Inter, pour un look professionnel */</span></p>
+<p class="p8"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s7">@import</span><span class="s4"> </span><span class="s8">url</span><span class="s4">(</span><span class="s1">'https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap'</span><span class="s4">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">body</span><span class="s1"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-family:</span><span class="s1"> </span><span class="s9">'Inter'</span><span class="s1">, </span><span class="s8">sans-serif</span><span class="s1">;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s4"> </span><span class="s8">#f7f9fc</span><span class="s4">; </span><span class="s1">/* Arrière-plan légèrement gris */</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">/* Style pour les boutons primaires (vert/bleu) */</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.btn-primary</span><span class="s4"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>@apply inline-block px-8 py-3 rounded-full text-white font-bold transition duration-300 ease-in-out shadow-lg </span><span class="s2">hover:</span><span class="s8">shadow-xl</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">/* Nouvelle palette pour Cap d'Ail : Bleu (Méditerranée) et Or (Rayonnement) */</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">.btn-blue</span><span class="s1"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>@apply bg-blue-700 </span><span class="s2">hover:</span><span class="s8">bg-blue-800</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">.btn-gold</span><span class="s1"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>@apply bg-yellow-500 </span><span class="s2">hover:</span><span class="s8">bg-yellow-600</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">/* Style spécifique pour la section Héro */</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">#hero-section</span><span class="s4"> {</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">/* Mélange de bleu profond et de l'or/jaune pour un effet premium et méditerranéen */</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background:</span><span class="s1"> </span><span class="s8">linear-gradient(</span><span class="s10">135deg</span><span class="s1">, </span><span class="s8">rgba(</span><span class="s10">23</span><span class="s1">, </span><span class="s10">37</span><span class="s1">, </span><span class="s10">84</span><span class="s1">, </span><span class="s10">0.95</span><span class="s8">)</span><span class="s1">, </span><span class="s8">rgba(</span><span class="s10">251</span><span class="s1">, </span><span class="s10">191</span><span class="s1">, </span><span class="s10">36</span><span class="s1">, </span><span class="s10">0.9</span><span class="s8">))</span><span class="s1">;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">clip-path:</span><span class="s4"> </span><span class="s8">polygon(</span><span class="s10">0</span><span class="s4"> </span><span class="s10">0</span><span class="s4">, </span><span class="s10">100%</span><span class="s4"> </span><span class="s10">0</span><span class="s4">, </span><span class="s10">100%</span><span class="s4"> </span><span class="s10">90%</span><span class="s4">, </span><span class="s10">0</span><span class="s4"> </span><span class="s10">100%</span><span class="s8">)</span><span class="s4">; </span><span class="s1">/* Bord inférieur courbé pour l'effet */</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">/* Cache la vraie image pour utiliser un grand espace */</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.candidate-photo</span><span class="s4"> {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">min-height:</span><span class="s1"> </span><span class="s10">400px</span><span class="s1">;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">background-size:</span><span class="s4"> </span><span class="s8">cover</span><span class="s4">;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">background-position:</span><span class="s4"> </span><span class="s8">center</span><span class="s4">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">script</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">// Fonction JavaScript pour ouvrir les fenêtres de partage</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">function</span><span class="s1"> sharePage(platform) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">const</span><span class="s1"> url = encodeURIComponent(window.location.href);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">const</span><span class="s1"> title = encodeURIComponent(document.title);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">let</span><span class="s1"> shareUrl = </span><span class="s9">''</span><span class="s1">;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">switch</span><span class="s1"> (platform) {</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">case</span><span class="s1"> </span><span class="s9">'facebook'</span><span class="s1">:</span></p>
+<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span>shareUrl = </span><span class="s1">`https://www.facebook.com/sharer/sharer.php?u=</span><span class="s4">${url}</span><span class="s1">`</span><span class="s4">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">break</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">case</span><span class="s1"> </span><span class="s9">'twitter'</span><span class="s1">:</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">// Note: 'text' est souvent préféré pour Twitter, car il est plus direct</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>shareUrl = </span><span class="s9">`https://twitter.com/intent/tweet?url=</span><span class="s1">${url}</span><span class="s9">&amp;text=</span><span class="s1">${title}</span><span class="s9">`</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">break</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">case</span><span class="s1"> </span><span class="s9">'whatsapp'</span><span class="s1">:</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>shareUrl = </span><span class="s9">`https://api.whatsapp.com/send?text=</span><span class="s1">${title}</span><span class="s9">%20</span><span class="s1">${url}</span><span class="s9">`</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">break</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">case</span><span class="s1"> </span><span class="s9">'linkedin'</span><span class="s1">:</span></p>
+<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span>shareUrl = </span><span class="s1">`https://www.linkedin.com/sharing/share-offsite/?url=</span><span class="s4">${url}</span><span class="s1">`</span><span class="s4">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">break</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">default</span><span class="s1">:</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">return</span><span class="s1">;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// Ouvre la fenêtre de partage dans une nouvelle petite fenêtre</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>window.open(shareUrl, </span><span class="s9">'_blank'</span><span class="s1">, </span><span class="s9">'width=600,height=400'</span><span class="s1">);</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s3">&lt;</span><span class="s6">body</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-800"</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- 1. BARRE DE NAVIGATION (HEADER) --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">header</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white shadow-md sticky top-0 z-50"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto px-4 py-4 flex justify-between items-center"</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Logo --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center space-x-2"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-8 h-8 text-yellow-500"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"none"</span><span class="s4"> </span><span class="s2">stroke</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s4"> </span><span class="s2">xmlns</span><span class="s3">=</span><span class="s1">"http://www.w3.org/2000/svg"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">stroke-linecap</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-linejoin</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-width</span><span class="s3">=</span><span class="s1">"2"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M12 21.75l-6-3.75V8.25l6 3.75 6-3.75v9.75l-6 3.75zM12 2.25L6 6v12.75l6 3.75 6-3.75V6l-6-3.75z"</span><span class="s3">/&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-extrabold text-blue-700"</span><span class="s3">&gt;</span><span class="s1">BECK 2026 - Cap d'Ail</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Menu de navigation principal --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">nav</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hidden md:flex space-x-6 font-medium text-gray-600"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#parcours"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-blue-700 transition duration-150"</span><span class="s3">&gt;</span><span class="s4">Parcours</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#programme"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-blue-700 transition duration-150"</span><span class="s3">&gt;</span><span class="s4">Programme</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#liste-municipale"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-blue-700 transition duration-150"</span><span class="s3">&gt;</span><span class="s4">L'Équipe</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#actualites"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-blue-700 transition duration-150"</span><span class="s3">&gt;</span><span class="s4">Actualités</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#impliquer"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"btn-primary btn-gold px-4 py-2 text-sm"</span><span class="s3">&gt;</span><span class="s4">S'Impliquer</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">nav</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Bouton de menu mobile (à implémenter en JS) --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"md:hidden text-gray-600 hover:text-blue-700 focus:outline-none"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-6 h-6"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"none"</span><span class="s4"> </span><span class="s2">stroke</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s4"> </span><span class="s2">xmlns</span><span class="s3">=</span><span class="s1">"http://www.w3.org/2000/svg"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">stroke-linecap</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-linejoin</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-width</span><span class="s3">=</span><span class="s1">"2"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M4 6h16M4 12h16m-7 6h7"</span><span class="s3">&gt;&lt;/</span><span class="s6">path</span><span class="s3">&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">header</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- 2. SECTION HÉRO (La première impression) --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"hero-section"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-16 md:py-24 text-white"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center"</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Colonne du texte et des CTA --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"order-2 md:order-1"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm uppercase tracking-widest mb-2 font-light"</span><span class="s3">&gt;</span><span class="s1">Xavier Beck - Candidat à la Mairie de Cap d'Ail</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h1</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>POUR UN CAP D'AIL PLUS </span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-yellow-300"</span><span class="s3">&gt;</span><span class="s1">FACILE À VIVRE.</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">h1</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl mb-8 font-light max-w-lg"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>Construire le Cap d'Ail de demain : un littoral protégé, des services modernes et une qualité de vie incomparable pour tous.</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Boutons d'Action (CTA) --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-6"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s1"> </span><span class="s2">href</span><span class="s3">=</span><span class="s5">"#programme"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"btn-primary btn-blue"</span><span class="s3">&gt;</span><span class="s1">DÉCOUVRIR LE PROJET 2026</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s1"> </span><span class="s2">href</span><span class="s3">=</span><span class="s5">"#don"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"btn-primary btn-gold"</span><span class="s3">&gt;</span><span class="s1">SOUTENIR LA CAMPAGNE</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- NOUVEAU: Boutons de Partage --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center space-x-3 mt-4 text-sm"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"font-semibold"</span><span class="s3">&gt;</span><span class="s1">Partager :</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s12">&lt;!-- Facebook --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"sharePage('facebook')"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-white hover:text-blue-400 transition duration-150"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-6 h-6 fill-current"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s4"> </span><span class="s2">xmlns</span><span class="s3">=</span><span class="s1">"http://www.w3.org/2000/svg"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3 8h-2v2h2v3h-3v-3h-2V9h2V7c0-1.66 1.34-3 3-3h2v3h-2c-.55 0-1 .45-1 1v1h3l-.4 3z"</span><span class="s3">/&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s12">&lt;!-- X / Twitter --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"sharePage('twitter')"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-white hover:text-blue-400 transition duration-150"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-6 h-6 fill-current"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s4"> </span><span class="s2">xmlns</span><span class="s3">=</span><span class="s1">"http://www.w3.org/2000/svg"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M18.244 2.25h3.308l-7.227 8.261 8.52 11.458H16.27l-6.843-8.686L3.924 22.75H0.44l7.653-8.777L0.864 2.25h3.58l5.404 7.822 6.758-7.822h2.072zM10.746 16.326l-1.636-1.398-6.046 5.822H6.974l4.125-4.704zM16.233 7.234L14.41 5.05H8.76l1.205 1.543 5.483 7.078 1.635-1.398L16.233 7.234z"</span><span class="s3">/&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- WhatsApp (utile pour mobile) --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"sharePage('whatsapp')"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-white hover:text-blue-400 transition duration-150"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-6 h-6 fill-current"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s4"> </span><span class="s2">xmlns</span><span class="s3">=</span><span class="s1">"http://www.w3.org/2000/svg"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M12.002 0c6.627 0 12 5.373 12 12s-5.373 12-12 12-12-5.373-12-12 5.373-12 12-12zm-2.094 17.584l-.587-1.745c-.217-.645-.296-1.3-.238-1.956.126-1.428.59-2.793 1.39-4.04l.115-.175c.196-.28.32-.596.32-.93 0-.74-.6-1.34-1.34-1.34s-1.34.6-1.34 1.34v.053l-.974.004c-.035-1.93.948-3.79 2.65-4.877 1.7-1.087 3.784-1.22 5.63-.448 1.54.64 2.83 1.8 3.53 3.32.74 1.6.76 3.42.06 5.04-.6 1.41-1.6 2.58-2.88 3.43l-.42.27c-.44.29-.9.49-1.38.64l-.39.12c-.22.06-.44.11-.66.11-.74 0-1.4-.41-1.78-1.07l-.21-.4-.69.21c-.4.12-.8.19-1.2.19-.6 0-1.18-.15-1.68-.44l-.39-.23c-.22-.12-.42-.27-.61-.45l-.42-.42zm1.688-6.19c-.58 0-1.04.46-1.04 1.04 0 .58.46 1.04 1.04 1.04s1.04-.46 1.04-1.04c0-.58-.46-1.04-1.04-1.04z"</span><span class="s3">/&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Colonne de la photo du Candidat --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"order-1 md:order-2 flex justify-center md:justify-end"</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- IMPORTANT: Le fichier doit être nommé 'xavier-beck.jpg' et doit être dans le dossier 'images/' de votre dépôt GitHub. --&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">img</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s2">src</span><span class="s3">=</span><span class="s1">"images/xavier-beck.jpg"</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Portrait professionnel de Xavier Beck"</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s2">class</span><span class="s3">=</span><span class="s1">"rounded-xl shadow-2xl w-full max-w-xs md:max-w-sm lg:max-w-md object-cover transform hover:scale-[1.02] transition duration-300"</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- NOUVELLE SECTION 3: PARCOURS ET BILAN DE XAVIER BECK --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"parcours"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-16 md:py-20 bg-white"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto px-4"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-3xl font-bold text-center mb-12 text-blue-800"</span><span class="s3">&gt;</span><span class="s1">Xavier Beck : Un Engagement pour Cap d'Ail</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-1 lg:grid-cols-3 gap-8 items-start"</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Colonne 1: Le Parcours Professionnel et Politique --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"lg:col-span-1 p-6 bg-gray-50 rounded-xl shadow-lg border-t-4 border-yellow-500"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-semibold mb-4 text-blue-900 flex items-center"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-6 h-6 mr-2 text-yellow-500"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"none"</span><span class="s4"> </span><span class="s2">stroke</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s4"> </span><span class="s2">xmlns</span><span class="s3">=</span><span class="s1">"http://www.w3.org/2000/svg"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">stroke-linecap</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-linejoin</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-width</span><span class="s3">=</span><span class="s1">"2"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M21 13.255A23.593 23.593 0 0112 15c-3.18 0-6.248-.54-9-1.745M16 18V6l-4 4-4-4v12"</span><span class="s3">&gt;&lt;/</span><span class="s6">path</span><span class="s3">&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>Parcours et Mandats</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"space-y-3 text-gray-600"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex items-start"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"font-semibold text-blue-700 mr-2"</span><span class="s3">&gt;</span><span class="s1">&amp;bull;</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>**Avocat au Barreau :** Une carrière dédiée au droit et à la rigueur, principes qu'il applique à la gestion municipale.</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex items-start"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"font-semibold text-blue-700 mr-2"</span><span class="s3">&gt;</span><span class="s1">&amp;bull;</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>**Maire de Cap d'Ail :** Élu pour la première fois en 1995, il œuvre sans relâche pour l'amélioration du cadre de vie.</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex items-start"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"font-semibold text-blue-700 mr-2"</span><span class="s3">&gt;</span><span class="s1">&amp;bull;</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>**Vice-Président du Département :** Un rôle clé pour défendre les intérêts de Cap d'Ail à l'échelle départementale.</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Colonne 2: Le Bilan des Dernières Années --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"lg:col-span-2 p-6 bg-blue-700 text-white rounded-xl shadow-lg"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-2xl font-semibold mb-4 text-yellow-300 flex items-center"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-7 h-7 mr-2"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"none"</span><span class="s4"> </span><span class="s2">stroke</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s4"> </span><span class="s2">xmlns</span><span class="s3">=</span><span class="s1">"http://www.w3.org/2000/svg"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">stroke-linecap</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-linejoin</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-width</span><span class="s3">=</span><span class="s1">"2"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"</span><span class="s3">&gt;&lt;/</span><span class="s6">path</span><span class="s3">&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>Notre Bilan : Les Fondations de Demain</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"mb-4 font-light"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>Depuis son premier mandat, Xavier Beck a transformé Cap d'Ail en une commune modèle de la Côte d'Azur. Les actions clés incluent :</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"list-disc list-inside space-y-2 font-medium"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">**Modernisation des Infrastructures :** Reconstruction et rénovation des écoles et des équipements sportifs (stade, piscine).</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">**Maîtrise Fiscale :** Maintien d'un niveau d'imposition stable et désendettement de la ville.</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">**Réhabilitation du Littoral :** Protection et mise en valeur des sentiers et des plages (Mala, Pissarelles).</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;</span><span class="s1">**Sécurité Renforcée :** Augmentation des effectifs de police municipale et déploiement de la vidéoprotection.</span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- 4. SECTION DES 3 PILIERS DU PROGRAMME (AXÉ SUR LE FUTUR) - MODIFIÉE --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"programme"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-16 md:py-24 bg-gray-100 relative z-10"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto px-4"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl font-bold text-center mb-12 text-blue-800"</span><span class="s3">&gt;</span><span class="s4">Nos 3 Prochains Grands Chantiers</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-1 md:grid-cols-3 gap-8"</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Pilier 1: Santé et Proximité (Maison Médicale) --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-blue-600"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-center mb-4"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-12 h-12 text-blue-700"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"none"</span><span class="s4"> </span><span class="s2">stroke</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s4"> </span><span class="s2">xmlns</span><span class="s3">=</span><span class="s1">"http://www.w3.org/2000/svg"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">stroke-linecap</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-linejoin</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-width</span><span class="s3">=</span><span class="s1">"2"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364l-1.318 1.318-1.318-1.318a4.5 4.5 0 00-6.364 0z"</span><span class="s3">&gt;&lt;/</span><span class="s6">path</span><span class="s3">&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-semibold mb-3 text-blue-900"</span><span class="s3">&gt;</span><span class="s1">1. Santé : Ouverture de la Maison Médicale</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-gray-600"</span><span class="s3">&gt;</span><span class="s1">**Priorité Absolue :** Créer un pôle de santé de proximité comprenant un pédiatre, des généralistes et des spécialistes, pour garantir l'accès aux soins de qualité pour tous les Cap d'Aillois.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Pilier 2: Gestion et Finances (Rigoureuse) --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-yellow-500"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-center mb-4"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-12 h-12 text-yellow-600"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"none"</span><span class="s4"> </span><span class="s2">stroke</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s4"> </span><span class="s2">xmlns</span><span class="s3">=</span><span class="s1">"http://www.w3.org/2000/svg"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">stroke-linecap</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-linejoin</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-width</span><span class="s3">=</span><span class="s1">"2"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m4 4h4m4-4h4m-4 0v4m-4-4V7m4 10h.01M19 19h.01"</span><span class="s3">&gt;&lt;/</span><span class="s6">path</span><span class="s3">&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-semibold mb-3 text-yellow-700"</span><span class="s3">&gt;</span><span class="s1">2. Gestion Financière Rigoureuse</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-gray-600"</span><span class="s3">&gt;</span><span class="s1">**Gouvernance d'Avocat :** Poursuivre la gestion saine et rigoureuse des finances de la ville. Maîtrise des dépenses, désendettement continu et stabilité fiscale.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Pilier 3: Qualité de Vie et Cadre (Amélioration Continue) --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-indigo-600"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-center mb-4"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-12 h-12 text-indigo-700"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"none"</span><span class="s4"> </span><span class="s2">stroke</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s4"> </span><span class="s2">xmlns</span><span class="s3">=</span><span class="s1">"http://www.w3.org/2000/svg"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">stroke-linecap</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-linejoin</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-width</span><span class="s3">=</span><span class="s1">"2"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"</span><span class="s3">&gt;&lt;/</span><span class="s6">path</span><span class="s3">&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-semibold mb-3 text-indigo-800"</span><span class="s3">&gt;</span><span class="s1">3. Amélioration de la Qualité de Vie</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-gray-600"</span><span class="s3">&gt;</span><span class="s1">**Le Quotidien au Centre :** Sécurité, propreté, embellissement des espaces publics et fluidification de la circulation sont nos leviers d'action continus pour une ville agréable.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Bouton vers le programme complet --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center mt-12"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#programme-detail"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-blue-700 hover:text-blue-900 font-semibold transition duration-150 border-b-2 border-blue-700 pb-1"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>Découvrez le Programme Municipal Complet 2026-2032 &amp;rarr;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- 5. SECTION: LA LISTE MUNICIPALE (Inchangée) --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"liste-municipale"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-16 md:py-24 bg-gray-100"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto px-4"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-3xl font-bold text-center mb-4 text-blue-800"</span><span class="s3">&gt;</span><span class="s1">L'Équipe 2026 : Au Service de Cap d'Ail</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto"</span><span class="s3">&gt;</span><span class="s1">Une équipe renouvelée, unie par l'ambition de faire progresser notre ville.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8"</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Membre 1: 1er Adjoint (Serge CASTEL) --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://placehold.co/120x120/fbc136/172554?text=SC"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Portrait de Serge Castel"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-yellow-500"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-lg font-semibold text-gray-900"</span><span class="s3">&gt;</span><span class="s4">Serge Castel</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm text-blue-600 font-medium"</span><span class="s3">&gt;</span><span class="s1">1er Adjoint - Finances &amp; Développement Économique</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Membre 2: 2ème Adjointe (Delphine ZAMBERNARDI) --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://placehold.co/120x120/fbc136/172554?text=DZ"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Portrait de Delphine Zambernardi"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-yellow-500"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-lg font-semibold text-gray-900"</span><span class="s3">&gt;</span><span class="s1">Delphine Zambernardi</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm text-blue-600 font-medium"</span><span class="s3">&gt;</span><span class="s1">2ème Adjointe - Affaires Scolaires &amp; Action Sociale</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Membre 3: 3ème Adjoint (Gilles FRASNETTI) --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://placehold.co/120x120/fbc136/172554?text=GF"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Portrait de Gilles Frasnetti"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-yellow-500"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-lg font-semibold text-gray-900"</span><span class="s3">&gt;</span><span class="s1">Gilles Frasnetti</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm text-blue-600 font-medium"</span><span class="s3">&gt;</span><span class="s1">3ème Adjoint - Jeunesse, Sports &amp; Vie Associative</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Membre 4: 7ème Adjointe (Pascale SPAGLI) --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://placehold.co/120x120/fbc136/172554?text=PS"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Portrait de Pascale Spagli"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-yellow-500"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-lg font-semibold text-gray-900"</span><span class="s3">&gt;</span><span class="s4">Pascale Spagli</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm text-blue-600 font-medium"</span><span class="s3">&gt;</span><span class="s1">7ème Adjointe - Culture, Patrimoine &amp; Animations</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center mt-12"</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Lien conservé mais adapté pour l'instant --&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s1"> </span><span class="s2">href</span><span class="s3">=</span><span class="s5">"#liste-complete"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"btn-primary btn-blue"</span><span class="s3">&gt;</span><span class="s1">Voir la liste complète des 29 colistiers</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- NOUVELLE SECTION 6: ACTUALITÉS DE LA CAMPAGNE --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"actualites"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-16 md:py-24 bg-white"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto px-4"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl font-bold text-center mb-12 text-blue-800"</span><span class="s3">&gt;</span><span class="s4">Actualités de la Campagne</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-1 md:grid-cols-3 gap-8"</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Actu 1: Vœux du Nouvel An --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-gray-50 rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://placehold.co/600x400/1e40af/ffffff?text=V%C5%92UX+2026"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Voeux du Nouvel An"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full h-48 object-cover"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"p-6"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-blue-500 font-semibold mb-1 uppercase"</span><span class="s3">&gt;</span><span class="s4">10 Janvier 2026</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-bold mb-2 text-blue-900"</span><span class="s3">&gt;</span><span class="s1">Les Vœux pour une Année d'Ambition</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-gray-600 text-sm"</span><span class="s3">&gt;</span><span class="s1">Xavier Beck a présenté ses vœux à la population, renouvelant son engagement pour une ville solidaire et entreprenante. Retrouvez son discours intégral.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-3 inline-block text-yellow-600 font-semibold text-sm hover:text-yellow-700"</span><span class="s3">&gt;</span><span class="s4">Lire la suite &amp;rarr;</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Actu 2: Galette des Rois --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-gray-50 rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://placehold.co/600x400/fbbf24/172554?text=GALETTE"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Galette des Rois"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full h-48 object-cover"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"p-6"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-blue-500 font-semibold mb-1 uppercase"</span><span class="s3">&gt;</span><span class="s4">24 Janvier 2026</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-bold mb-2 text-blue-900"</span><span class="s3">&gt;</span><span class="s1">Moment Convivial : Notre Galette des Rois</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-gray-600 text-sm"</span><span class="s3">&gt;</span><span class="s1">Un grand rassemblement amical à l'Espace Saint-Exupéry pour partager la traditionnelle galette et échanger sur les projets de quartier.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-3 inline-block text-yellow-600 font-semibold text-sm hover:text-yellow-700"</span><span class="s3">&gt;</span><span class="s4">Voir les photos &amp;rarr;</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Actu 3: 1er Meeting de Campagne --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-gray-50 rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://placehold.co/600x400/172554/ffffff?text=MEETING+DE+LANCEMENT"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"1er Meeting de Campagne"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full h-48 object-cover"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"p-6"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-blue-500 font-semibold mb-1 uppercase"</span><span class="s3">&gt;</span><span class="s4">1er Février 2026</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-bold mb-2 text-blue-900"</span><span class="s3">&gt;</span><span class="s1">Lancement Officiel de la Campagne 2026</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-gray-600 text-sm"</span><span class="s3">&gt;</span><span class="s1">Notre premier grand meeting public. Un succès retentissant pour marquer le coup d'envoi et dévoiler les grandes lignes de notre ambition pour Cap d'Ail.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-3 inline-block text-yellow-600 font-semibold text-sm hover:text-yellow-700"</span><span class="s3">&gt;</span><span class="s4">Visionner le discours &amp;rarr;</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- 7. SECTION D'APPEL À L'ACTION SECONDAIRE (Impliquer) --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"impliquer"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-16 bg-blue-50"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto px-4 text-center"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-4xl font-extrabold text-blue-800 mb-4"</span><span class="s3">&gt;</span><span class="s1">Votre implication est la clé du futur.</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl text-gray-700 mb-8 max-w-3xl mx-auto"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>Participez activement à la construction de ce nouveau mandat pour que Cap d'Ail continue de rayonner.</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s1"> </span><span class="s2">href</span><span class="s3">=</span><span class="s5">"#"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"btn-primary btn-blue"</span><span class="s3">&gt;</span><span class="s1">Devenir Bénévole</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s1"> </span><span class="s2">href</span><span class="s3">=</span><span class="s5">"#don"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"btn-primary btn-gold"</span><span class="s3">&gt;</span><span class="s1">Faire un Don Sécurisé</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- 8. PIED DE PAGE (FOOTER) - MODIFIÉ --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">footer</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-gray-900 text-white py-10"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8"</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Colonne 1: Branding --&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-2xl font-extrabold text-white"</span><span class="s3">&gt;</span><span class="s4">BECK 2026</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm mt-2 text-gray-400"</span><span class="s3">&gt;</span><span class="s1">Pour un Cap d'Ail tourné vers l'excellence.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Colonne 2: Liens rapides --&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h4</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-lg font-semibold mb-3 text-yellow-500"</span><span class="s3">&gt;</span><span class="s4">Navigation</span><span class="s3">&lt;/</span><span class="s6">h4</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"space-y-2 text-sm text-gray-400"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;&lt;</span><span class="s6">a</span><span class="s1"> </span><span class="s2">href</span><span class="s3">=</span><span class="s5">"#parcours"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"hover:text-white"</span><span class="s3">&gt;</span><span class="s1">Parcours &amp; Bilan</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;&lt;</span><span class="s6">a</span><span class="s1"> </span><span class="s2">href</span><span class="s3">=</span><span class="s5">"#programme"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"hover:text-white"</span><span class="s3">&gt;</span><span class="s1">Notre Projet Futur</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#liste-municipale"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-white"</span><span class="s3">&gt;</span><span class="s4">L'Équipe</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;&lt;</span><span class="s6">a</span><span class="s1"> </span><span class="s2">href</span><span class="s3">=</span><span class="s5">"#actualites"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"hover:text-white"</span><span class="s3">&gt;</span><span class="s1">Actualités &amp; Meetings</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Colonne 3: Contact et Légal --&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h4</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-lg font-semibold mb-3 text-yellow-500"</span><span class="s3">&gt;</span><span class="s4">Informations</span><span class="s3">&lt;/</span><span class="s6">h4</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"space-y-2 text-sm text-gray-400"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;&lt;</span><span class="s6">a</span><span class="s1"> </span><span class="s2">href</span><span class="s3">=</span><span class="s5">"#"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"hover:text-white"</span><span class="s3">&gt;</span><span class="s1">Contactez-nous</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;&lt;</span><span class="s6">a</span><span class="s1"> </span><span class="s2">href</span><span class="s3">=</span><span class="s5">"#"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"hover:text-white"</span><span class="s3">&gt;</span><span class="s1">Mentions Légales</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s3">&gt;&lt;</span><span class="s6">a</span><span class="s1"> </span><span class="s2">href</span><span class="s3">=</span><span class="s5">"#"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"hover:text-white"</span><span class="s3">&gt;</span><span class="s1">Politique de Confidentialité</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Colonne 4: Réseaux Sociaux (MIS À JOUR) --&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h4</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-lg font-semibold mb-3 text-yellow-500"</span><span class="s3">&gt;</span><span class="s4">Suivez-nous</span><span class="s3">&lt;/</span><span class="s6">h4</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex space-x-4"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s12">&lt;!-- Facebook --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://facebook.com/XavierBeckCapdAil"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-400 hover:text-blue-600 transition duration-150"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-6 h-6"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3 8h-2v2h2v3h-3v-3h-2V9h2V7c0-1.66 1.34-3 3-3h2v3h-2c-.55 0-1 .45-1 1v1h3l-.4 3z"</span><span class="s3">/&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s12">&lt;!-- Instagram --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://instagram.com/XavierBeckCapdAil"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-400 hover:text-pink-600 transition duration-150"</span><span class="s3">&gt;</span></p>
+<p class="p9"><span class="s13"><span class="Apple-converted-space">                        </span></span><span class="s14">&lt;</span><span class="s15">svg</span><span class="s13"> </span><span class="s16">class</span><span class="s14">=</span><span class="s11">"w-6 h-6"</span><span class="s13"> </span><span class="s16">fill</span><span class="s14">=</span><span class="s11">"currentColor"</span><span class="s13"> </span><span class="s16">viewBox</span><span class="s14">=</span><span class="s11">"0 0 24 24"</span><span class="s14">&gt;&lt;</span><span class="s15">path</span><span class="s13"> </span><span class="s16">d</span><span class="s14">=</span><span class="s11">"M12 2c-3.1 0-3.56.01-4.8.07-1.25.06-2.14.24-2.88.53-.74.29-1.39.69-2.02 1.32-.63.63-1.03 1.28-1.32 2.02-.29.74-.47 1.63-.53 2.88C2.01 8.44 2 8.9 2 12s.01 3.56.07 4.8c.06 1.25.24 2.14.53 2.88.29.74.69 1.39 1.32 2.02.63.63 1.28 1.03 2.02 1.32.74.29 1.63.47 2.88.53C8.44 21.99 8.9 22 12 22s3.56-.01 4.8-.07c1.25-.06 2.14-.24 2.88-.53.74-.29 1.39-.69 2.02-1.32.63-.63 1.03-1.28 1.32-2.02.29-.74.47-1.63.53-2.88.06-1.24.07-1.7.07-4.8s-.01-3.56-.07-4.8c-.06-1.25-.24-2.14-.53-2.88-.29-.74-.69-1.39-1.32-2.02-.63-.63-1.28-1.03-2.02-1.32-.74-.29-1.63-.47-2.88-.53C15.56 2.01 15.1 2 12 2zm0 1.96c3.08 0 3.48.01 4.7.07 1.15.06 1.74.22 2.13.38.4.16.7.35.98.63.28.28.47.58.63.98.16.39.32.98.38 2.13.06 1.22.07 1.62.07 4.7s-.01 3.48-.07 4.7c-.06 1.15-.22 1.74-.38 2.13-.16.4-.35.7-.63.98-.28.28-.58.47-.98.63-.39.16-.98.32-2.13.38-1.22.06-1.62.07-4.7.07s-3.48-.01-4.7-.07c-1.15-.06-1.74-.22-2.13-.38-.4-.16-.7-.35-.98-.63-.28-.28-.47-.58-.63-.98-.16-.39-.32-.98-.38-2.13-.06-1.22-.07-1.62-.07-4.7s.01-3.48.07-4.7c.06-1.15.22-1.74.38-2.13.16-.4.35-.7.63-.98.28-.28.58-.47.98-.63.39-.16.98-.32 2.13-.38 1.22-.06 1.62-.07 4.7-.07zm0 2.87c-3.1 0-5.61 2.51-5.61 5.61s2.51 5.61 5.61 5.61 5.61-2.51 5.61-5.61-2.51-5.61-5.61-5.61zm0 9.25c-2.01 0-3.64-1.63-3.64-3.64s1.63-3.64 3.64-3.64 3.64 1.63 3.64 3.64-1.63 3.64-3.64 3.64zm5.02-9.28c.4 0 .73-.33.73-.73s-.33-.73-.73-.73-.73.33-.73.73.33.73.73.73z"</span><span class="s14">/&gt;&lt;/</span><span class="s15">svg</span><span class="s14">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s12">&lt;!-- X / Twitter --&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://twitter.com/XavierBeckCapdAil"</span><span class="s4"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-gray-400 hover:text-blue-400 transition duration-150"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-6 h-6"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M18.244 2.25h3.308l-7.227 8.261 8.52 11.458H16.27l-6.843-8.686L3.924 22.75H0.44l7.653-8.777L0.864 2.25h3.58l5.404 7.822 6.758-7.822h2.072zM10.746 16.326l-1.636-1.398-6.046 5.822H6.974l4.125-4.704zM16.233 7.234L14.41 5.05H8.76l1.205 1.543 5.483 7.078 1.635-1.398L16.233 7.234z"</span><span class="s3">/&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center text-sm text-gray-500 mt-6 border-t border-gray-800 pt-4"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>&amp;copy; 2024 Campagne Xavier Beck. Tous droits réservés.</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">footer</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s11"></span><br></p>
+<p class="p2"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
 </body>
 </html>
