@@ -16,12 +16,12 @@
     <!-- Chargement de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Configuration de la police Inter et d'une palette plus douce */
+        /* Configuration de la police Inter et de la palette */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #ffffff; /* Fond blanc pur pour l'effet allégé */
-            color: #1f2937; /* Gris foncé pour le texte principal */
+            background-color: #ffffff; 
+            color: #1f2937; 
         }
         
         /* Configuration des couleurs personnalisées Tailwind pour un thème fort */
@@ -29,9 +29,11 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary-blue': '#1e40af', /* Bleu foncé pour les titres et les actions */
-                        'secondary-gold': '#fcd34d', /* Jaune/Or vif pour l'accentuation */
-                        'bg-light': '#f9fafb', /* Gris très léger pour les sections de fond */
+                        'primary-blue': '#1e40af',       /* Bleu Principal (Force) */
+                        'secondary-gold': '#fcd34d',     /* Jaune/Or (Dynamisme) */
+                        'bg-light': '#f3f4f6',           /* Gris léger pour le fond de section */
+                        'accent-green': '#10b981',       /* Vert d'accentuation (Environnement) */
+                        'accent-red': '#ef4444',         /* Rouge d'accentuation (Santé/Urgence) */
                     }
                 }
             }
@@ -45,22 +47,24 @@
             @apply bg-primary-blue hover:bg-blue-800;
         }
         .btn-outline-gold {
-            @apply bg-transparent border-2 border-secondary-gold text-primary-blue hover:bg-secondary-gold hover:text-white;
-        }
-
-        /* Section Héro : Arrière-plan plus clair et centré */
-        #hero-section {
-            background: #f9fafb; /* Très léger gris */
+            /* Ajout d'une ombre gold plus visible */
+            @apply bg-transparent border-2 border-secondary-gold text-primary-blue shadow-md shadow-secondary-gold/50 hover:bg-secondary-gold hover:text-white;
         }
 
         /* Effet de carte modernisé */
         .modern-card {
-            @apply bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:scale-[1.01];
+            /* Bordures plus épaisses et ombres plus prononcées pour l'impact */
+            @apply bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-gray-200 hover:shadow-2xl transition duration-300 transform hover:scale-[1.01];
         }
 
-        /* Style pour masquer l'image si elle n'est pas présente (en utilisant placehold.co) */
+        /* Style pour masquer l'image si elle n'est pas présente */
         .candidate-photo {
              min-height: 350px;
+        }
+        
+        /* Style spécifique pour la section Bilan (ajout de dégradé) */
+        #parcours-gradient {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); /* Dégradé très léger */
         }
     </style>
     <script>
@@ -93,7 +97,7 @@
 <body>
 
     <!-- 1. BARRE DE NAVIGATION (HEADER) - Reste fixe et épurée -->
-    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+    <header class="bg-white shadow-md sticky top-0 z-50 border-b-4 border-secondary-gold">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <!-- Logo -->
             <div class="flex items-center space-x-2">
@@ -114,11 +118,11 @@
         </div>
     </header>
 
-    <!-- 2. SECTION HÉRO (Design plus épuré, centré) -->
-    <section id="hero-section" class="py-16 md:py-24">
+    <!-- 2. SECTION HÉRO (Centrée, et visuelle) -->
+    <section id="hero-section" class="py-16 md:py-24 bg-bg-light">
         <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             
-            <!-- Colonne du texte et des CTA (Centrée, 7/12 de largeur sur Desktop) -->
+            <!-- Colonne du texte et des CTA -->
             <div class="md:col-span-7 order-2 md:order-1">
                 <p class="text-sm uppercase tracking-widest mb-3 font-semibold text-primary-blue">
                     Xavier Beck - Candidat à la Mairie de Cap d'Ail
@@ -136,18 +140,20 @@
                     <a href="#don" class="btn-primary btn-outline-gold">Soutenir la Campagne</a>
                 </div>
 
-                <!-- Boutons de Partage -->
-                <div class="flex items-center space-x-3 mt-8 text-sm text-gray-500">
-                    <span class="font-semibold">Partager :</span>
-                    <button onclick="sharePage('facebook')" class="text-gray-500 hover:text-primary-blue transition duration-150"><svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3 8h-2v2h2v3h-3v-3h-2V9h2V7c0-1.66 1.34-3 3-3h2v3h-2c-.55 0-1 .45-1 1v1h3l-.4 3z"/></svg></button>
-                    <button onclick="sharePage('twitter')" class="text-gray-500 hover:text-primary-blue transition duration-150"><svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.261 8.52 11.458H16.27l-6.843-8.686L3.924 22.75H0.44l7.653-8.777L0.864 2.25h3.58l5.404 7.822 6.758-7.822h2.072zM10.746 16.326l-1.636-1.398-6.046 5.822H6.974l4.125-4.704zM16.233 7.234L14.41 5.05H8.76l1.205 1.543 5.483 7.078 1.635-1.398L16.233 7.234z"/></svg></button>
-                    <button onclick="sharePage('linkedin')" class="text-gray-500 hover:text-primary-blue transition duration-150"><svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8 8.91h2V14H8V8.91zm-1-1.68a1.99 1.99 0 011.99-1.99c1.1 0 1.99.89 1.99 1.99S9.1 10 8 10c-1.1 0-1.99-.89-1.99-1.99zM16 14h-2v-2c0-1.1-.9-2-2-2s-2 .9-2 2v2H8v-5h2v.91c.64-.69 1.5-1.14 2.5-1.14 1.77 0 3.25 1.48 3.25 3.25V14z"/></svg></button>
+                <!-- Boutons de Partage (Plus visible) -->
+                <div class="flex items-center space-x-4 mt-8 text-sm font-semibold text-gray-700">
+                    <span class="uppercase tracking-widest">Partager :</span>
+                    <!-- Facebook -->
+                    <button onclick="sharePage('facebook')" class="text-gray-500 hover:text-blue-600 transition duration-150 p-2 rounded-full bg-white shadow-md"><svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3 8h-2v2h2v3h-3v-3h-2V9h2V7c0-1.66 1.34-3 3-3h2v3h-2c-.55 0-1 .45-1 1v1h3l-.4 3z"/></svg></button>
+                    <!-- Twitter / X -->
+                    <button onclick="sharePage('twitter')" class="text-gray-500 hover:text-gray-900 transition duration-150 p-2 rounded-full bg-white shadow-md"><svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.261 8.52 11.458H16.27l-6.843-8.686L3.924 22.75H0.44l7.653-8.777L0.864 2.25h3.58l5.404 7.822 6.758-7.822h2.072zM10.746 16.326l-1.636-1.398-6.046 5.822H6.974l4.125-4.704zM16.233 7.234L14.41 5.05H8.76l1.205 1.543 5.483 7.078 1.635-1.398L16.233 7.234z"/></svg></button>
+                    <!-- LinkedIn -->
+                    <button onclick="sharePage('linkedin')" class="text-gray-500 hover:text-blue-700 transition duration-150 p-2 rounded-full bg-white shadow-md"><svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8 8.91h2V14H8V8.91zm-1-1.68a1.99 1.99 0 011.99-1.99c1.1 0 1.99.89 1.99 1.99S9.1 10 8 10c-1.1 0-1.99-.89-1.99-1.99zM16 14h-2v-2c0-1.1-.9-2-2-2s-2 .9-2 2v2H8v-5h2v.91c.64-.69 1.5-1.14 2.5-1.14 1.77 0 3.25 1.48 3.25 3.25V14z"/></svg></button>
                 </div>
             </div>
 
-            <!-- Colonne de la photo du Candidat (5/12 de largeur sur Desktop) -->
+            <!-- Colonne de la photo du Candidat -->
             <div class="md:col-span-5 order-1 md:order-2 flex justify-center">
-                <!-- Remplace l'image placeholder par une vraie photo si possible. -->
                 <img
                     src="images/xavier-beck.jpg"
                     alt="Portrait professionnel de Xavier Beck, Maire de Cap d'Ail"
@@ -158,46 +164,50 @@
         </div>
     </section>
 
-    <!-- 3. SECTION: LE BILAN (Parcours et Réalisations - Carte principale pour le bilan) -->
-    <section id="parcours" class="py-16 md:py-20 bg-bg-light">
+    <!-- 3. SECTION: LE BILAN (Parcours et Réalisations - Avec dégradé et cartes rehaussées) -->
+    <section id="parcours" class="py-16 md:py-24" id="parcours-gradient">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-extrabold text-center mb-10 text-primary-blue">Bilan : Des Fondations Solides pour Cap d'Ail</h2>
+            <h2 class="text-4xl font-extrabold text-center mb-12 text-gray-900">Bilan : Des Fondations Solides pour Cap d'Ail</h2>
             
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
                 
-                <!-- Colonne 1: Le Parcours (Informations en carte simple) -->
-                <div class="modern-card border-l-4 border-primary-blue flex flex-col justify-between">
+                <!-- Colonne 1: Le Parcours (Carte avec couleur de fond pour l'impact) -->
+                <div class="modern-card border-b-8 border-primary-blue flex flex-col justify-between bg-primary-blue/5">
                     <div>
-                        <svg class="w-8 h-8 mb-4 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.593 23.593 0 0112 15c-3.18 0-6.248-.54-9-1.745M16 18V6l-4 4-4-4v12"></path></svg>
-                        <h3 class="text-xl font-bold mb-3 text-gray-900">Un Homme d'Engagement Local</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Xavier Beck, avocat de profession, est au service de Cap d'Ail depuis 1995. Cette expérience garantit une gestion rigoureuse et une connaissance parfaite de nos enjeux.</p>
+                        <svg class="w-10 h-10 mb-4 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.593 23.593 0 0112 15c-3.18 0-6.248-.54-9-1.745M16 18V6l-4 4-4-4v12"></path></svg>
+                        <h3 class="text-2xl font-bold mb-3 text-primary-blue">Un Homme d'Engagement Local</h3>
+                        <p class="text-gray-700 mb-4 text-base">Xavier Beck, avocat de profession, est au service de Cap d'Ail depuis 1995. Cette expérience garantit une gestion rigoureuse et une connaissance parfaite de nos enjeux.</p>
                     </div>
-                    <ul class="space-y-2 text-sm font-semibold text-gray-700">
-                        <li class="flex items-center"><span class="text-secondary-gold mr-2 text-lg">&bull;</span> Maire de Cap d'Ail (depuis 1995)</li>
-                        <li class="flex items-center"><span class="text-secondary-gold mr-2 text-lg">&bull;</span> Vice-Président du Département</li>
+                    <ul class="space-y-3 mt-4 text-sm font-semibold text-gray-800">
+                        <li class="flex items-center p-2 rounded-lg bg-white shadow-sm">
+                            <span class="text-secondary-gold mr-3 text-2xl leading-none">&bull;</span> Maire de Cap d'Ail (depuis 1995)
+                        </li>
+                        <li class="flex items-center p-2 rounded-lg bg-white shadow-sm">
+                            <span class="text-secondary-gold mr-3 text-2xl leading-none">&bull;</span> Vice-Président du Département
+                        </li>
                     </ul>
                 </div>
                 
-                <!-- Colonne 2 & 3: Les Réalisations Clés (Deux cartes) -->
+                <!-- Colonne 2 & 3: Les Réalisations Clés (Deux cartes avec couleurs d'accentuation) -->
                 <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Carte 1: Infrastructures et Qualité de vie -->
-                    <div class="modern-card border-l-4 border-secondary-gold">
-                        <svg class="w-8 h-8 mb-4 text-secondary-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 5h6m-6 0h.01M9 17h.01M15 17h.01"/></svg>
-                        <h3 class="text-xl font-bold mb-3 text-gray-900">Infrastructures Modernes</h3>
-                        <ul class="space-y-2 text-gray-600 text-sm list-inside">
-                            <li class="flex items-center"><span class="mr-2 text-primary-blue">&check;</span> Rénovation des écoles et du stade.</li>
-                            <li class="flex items-center"><span class="mr-2 text-primary-blue">&check;</span> Mise en valeur du sentier du littoral.</li>
-                            <li class="flex items-center"><span class="mr-2 text-primary-blue">&check;</span> Développement de la vidéoprotection.</li>
+                    <!-- Carte 1: Infrastructures et Qualité de vie (Accent Vert) -->
+                    <div class="modern-card border-b-8 border-accent-green bg-accent-green/5">
+                        <svg class="w-10 h-10 mb-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 5h6m-6 0h.01M9 17h.01M15 17h.01"/></svg>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Infrastructures Modernes</h3>
+                        <ul class="space-y-3 text-gray-700 text-base list-inside">
+                            <li class="flex items-center"><span class="mr-2 text-accent-green font-bold text-xl">&check;</span> Rénovation des écoles et du stade.</li>
+                            <li class="flex items-center"><span class="mr-2 text-accent-green font-bold text-xl">&check;</span> Mise en valeur du sentier du littoral.</li>
+                            <li class="flex items-center"><span class="mr-2 text-accent-green font-bold text-xl">&check;</span> Développement de la vidéoprotection.</li>
                         </ul>
                     </div>
-                    <!-- Carte 2: Finances et Fiscalité -->
-                    <div class="modern-card border-l-4 border-primary-blue">
-                        <svg class="w-8 h-8 mb-4 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
-                        <h3 class="text-xl font-bold mb-3 text-gray-900">Gestion et Maîtrise Fiscale</h3>
-                        <ul class="space-y-2 text-gray-600 text-sm list-inside">
-                            <li class="flex items-center"><span class="mr-2 text-secondary-gold">&check;</span> Désendettement continu de la ville.</li>
-                            <li class="flex items-center"><span class="mr-2 text-secondary-gold">&check;</span> Stabilité des taux d'imposition municipaux.</li>
-                            <li class="flex items-center"><span class="mr-2 text-secondary-gold">&check;</span> Budgets d'investissement ambitieux et maîtrisés.</li>
+                    <!-- Carte 2: Finances et Fiscalité (Accent Gold) -->
+                    <div class="modern-card border-b-8 border-secondary-gold bg-secondary-gold/10">
+                        <svg class="w-10 h-10 mb-4 text-secondary-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Gestion et Maîtrise Fiscale</h3>
+                        <ul class="space-y-3 text-gray-700 text-base list-inside">
+                            <li class="flex items-center"><span class="mr-2 text-primary-blue font-bold text-xl">&check;</span> Désendettement continu de la ville.</li>
+                            <li class="flex items-center"><span class="mr-2 text-primary-blue font-bold text-xl">&check;</span> Stabilité des taux d'imposition municipaux.</li>
+                            <li class="flex items-center"><span class="mr-2 text-primary-blue font-bold text-xl">&check;</span> Budgets d'investissement ambitieux et maîtrisés.</li>
                         </ul>
                     </div>
                 </div>
@@ -205,37 +215,37 @@
         </div>
     </section>
 
-    <!-- 4. SECTION DES 3 PILIERS DU PROGRAMME (AXÉ SUR LE FUTUR - Design minimaliste) -->
-    <section id="programme" class="py-16 md:py-24">
+    <!-- 4. SECTION DES 3 PILIERS DU PROGRAMME (CHANTIERS - Avec cartes de couleurs distinctes) -->
+    <section id="programme" class="py-16 md:py-24 bg-bg-light">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-extrabold text-center mb-6 text-gray-900">Nos 3 Prochains Grands Chantiers</h2>
+            <h2 class="text-4xl font-extrabold text-center mb-6 text-primary-blue">Nos 3 Prochains Grands Chantiers</h2>
             <p class="text-center text-lg text-gray-600 mb-12 max-w-4xl mx-auto">Ces objectifs sont le socle de notre engagement pour améliorer concrètement votre quotidien à Cap d'Ail d'ici 2032.</p>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-                <!-- Pilier 1: Santé et Proximité -->
-                <div class="modern-card text-center flex flex-col items-center">
-                    <svg class="w-12 h-12 mb-4 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5l-7.5 7.5-7.5-7.5"></path></svg>
-                    <h3 class="text-xl font-bold mb-3 text-primary-blue">1. Création de la Maison Médicale</h3>
-                    <p class="text-gray-600 text-sm">Garantir l'accès aux soins pour tous en ouvrant un pôle de santé polyvalent au cœur de la ville, regroupant généralistes, pédiatres et professionnels paramédicaux.</p>
+                <!-- Pilier 1: Santé et Proximité (Couleur accent-red) -->
+                <div class="modern-card text-center flex flex-col items-center border-b-4 border-accent-red bg-accent-red/5">
+                    <svg class="w-12 h-12 mb-4 text-accent-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5l-7.5 7.5-7.5-7.5"></path></svg>
+                    <h3 class="text-xl font-bold mb-3 text-accent-red">1. Création de la Maison Médicale</h3>
+                    <p class="text-gray-700 text-base">Garantir l'accès aux soins pour tous en ouvrant un pôle de santé polyvalent au cœur de la ville, regroupant généralistes, pédiatres et professionnels paramédicaux.</p>
                 </div>
 
-                <!-- Pilier 2: Gestion et Finances -->
-                <div class="modern-card text-center flex flex-col items-center">
-                    <svg class="w-12 h-12 mb-4 text-secondary-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                <!-- Pilier 2: Gestion et Finances (Couleur primary-blue) -->
+                <div class="modern-card text-center flex flex-col items-center border-b-4 border-primary-blue bg-primary-blue/5">
+                    <svg class="w-12 h-12 mb-4 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
                     <h3 class="text-xl font-bold mb-3 text-primary-blue">2. Zéro Dette Fiscale Nouvelle</h3>
-                    <p class="text-gray-600 text-sm">Poursuite d'une gestion stricte des finances publiques. Nous refusons l'augmentation des impôts et continuons le désendettement pour les générations futures.</p>
+                    <p class="text-gray-700 text-base">Poursuite d'une gestion stricte des finances publiques. Nous refusons l'augmentation des impôts et continuons le désendettement pour les générations futures.</p>
                 </div>
 
-                <!-- Pilier 3: Cadre de Vie et Environnement -->
-                <div class="modern-card text-center flex flex-col items-center">
-                    <svg class="w-12 h-12 mb-4 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-                    <h3 class="text-xl font-bold mb-3 text-primary-blue">3. Fluidité et Proximité Améliorées</h3>
-                    <p class="text-gray-600 text-sm">Optimiser la circulation, renforcer les services de propreté et étendre les espaces verts pour faire de Cap d'Ail un lieu de vie toujours plus agréable et apaisé.</p>
+                <!-- Pilier 3: Cadre de Vie et Environnement (Couleur accent-green) -->
+                <div class="modern-card text-center flex flex-col items-center border-b-4 border-accent-green bg-accent-green/5">
+                    <svg class="w-12 h-12 mb-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    <h3 class="text-xl font-bold mb-3 text-accent-green">3. Fluidité et Proximité Améliorées</h3>
+                    <p class="text-gray-700 text-base">Optimiser la circulation, renforcer les services de propreté et étendre les espaces verts pour faire de Cap d'Ail un lieu de vie toujours plus agréable et apaisé.</p>
                 </div>
             </div>
             
             <div class="text-center mt-12">
-                <a href="#" class="text-primary-blue hover:text-blue-800 font-semibold transition duration-150 border-b-2 border-secondary-gold pb-1">
+                <a href="#" class="text-primary-blue hover:text-blue-800 font-bold transition duration-150 border-b-4 border-secondary-gold pb-1 text-lg">
                     Télécharger le Programme Municipal Complet (PDF) &rarr;
                 </a>
             </div>
@@ -243,47 +253,47 @@
     </section>
 
     <!-- 5. SECTION: LA LISTE MUNICIPALE (Design plus compact) -->
-    <section id="liste-municipale" class="py-16 md:py-20 bg-bg-light">
+    <section id="liste-municipale" class="py-16 md:py-20 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-extrabold text-center mb-4 text-primary-blue">L'Équipe 2026 : Proximité et Expertise</h2>
             <p class="text-center text-lg text-gray-600 mb-10 max-w-3xl mx-auto">Des Cap d'Aillois engagés, représentant la diversité et les compétences nécessaires pour diriger notre ville.</p>
 
             <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-6">
                 <!-- Membre 1: 1er Adjoint (Serge CASTEL) -->
-                <div class="text-center p-4 bg-white rounded-xl shadow-md border-t-2 border-secondary-gold">
-                    <img src="https://placehold.co/100x100/fde047/1f2937?text=SC" alt="Portrait de Serge Castel" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover">
+                <div class="text-center p-4 bg-bg-light rounded-xl shadow-lg border-t-4 border-secondary-gold">
+                    <img src="https://placehold.co/100x100/fcd34d/1f2937?text=SC" alt="Portrait de Serge Castel" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover shadow-inner">
                     <h3 class="text-md font-bold text-gray-900 leading-tight">Serge Castel</h3>
-                    <p class="text-xs text-primary-blue font-medium mt-1">1er Adjoint</p>
+                    <p class="text-xs text-primary-blue font-semibold mt-1">1er Adjoint</p>
                 </div>
                 <!-- Membre 2: 2ème Adjointe (Delphine ZAMBERNARDI) -->
-                <div class="text-center p-4 bg-white rounded-xl shadow-md border-t-2 border-primary-blue">
-                    <img src="https://placehold.co/100x100/1e40af/f9fafb?text=DZ" alt="Portrait de Delphine Zambernardi" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover">
+                <div class="text-center p-4 bg-bg-light rounded-xl shadow-lg border-t-4 border-primary-blue">
+                    <img src="https://placehold.co/100x100/1e40af/f9fafb?text=DZ" alt="Portrait de Delphine Zambernardi" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover shadow-inner">
                     <h3 class="text-md font-bold text-gray-900 leading-tight">Delphine Zambernardi</h3>
-                    <p class="text-xs text-primary-blue font-medium mt-1">2ème Adjointe</p>
+                    <p class="text-xs text-primary-blue font-semibold mt-1">2ème Adjointe</p>
                 </div>
                 <!-- Membre 3: 3ème Adjoint (Gilles FRASNETTI) -->
-                <div class="text-center p-4 bg-white rounded-xl shadow-md border-t-2 border-secondary-gold">
-                    <img src="https://placehold.co/100x100/fde047/1f2937?text=GF" alt="Portrait de Gilles Frasnetti" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover">
+                <div class="text-center p-4 bg-bg-light rounded-xl shadow-lg border-t-4 border-secondary-gold">
+                    <img src="https://placehold.co/100x100/fcd34d/1f2937?text=GF" alt="Portrait de Gilles Frasnetti" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover shadow-inner">
                     <h3 class="text-md font-bold text-gray-900 leading-tight">Gilles Frasnetti</h3>
-                    <p class="text-xs text-primary-blue font-medium mt-1">3ème Adjoint</p>
+                    <p class="text-xs text-primary-blue font-semibold mt-1">3ème Adjoint</p>
                 </div>
                 <!-- Membre 4: 7ème Adjointe (Pascale SPAGLI) -->
-                <div class="text-center p-4 bg-white rounded-xl shadow-md border-t-2 border-primary-blue">
-                    <img src="https://placehold.co/100x100/1e40af/f9fafb?text=PS" alt="Portrait de Pascale Spagli" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover">
+                <div class="text-center p-4 bg-bg-light rounded-xl shadow-lg border-t-4 border-primary-blue">
+                    <img src="https://placehold.co/100x100/1e40af/f9fafb?text=PS" alt="Portrait de Pascale Spagli" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover shadow-inner">
                     <h3 class="text-md font-bold text-gray-900 leading-tight">Pascale Spagli</h3>
-                    <p class="text-xs text-primary-blue font-medium mt-1">7ème Adjointe</p>
+                    <p class="text-xs text-primary-blue font-semibold mt-1">7ème Adjointe</p>
                 </div>
                 <!-- Membre 5: Colistier (Mock) -->
-                 <div class="text-center p-4 bg-white rounded-xl shadow-md border-t-2 border-secondary-gold">
-                    <img src="https://placehold.co/100x100/fde047/1f2937?text=MC" alt="Portrait de Marc Charon" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover">
+                 <div class="text-center p-4 bg-bg-light rounded-xl shadow-lg border-t-4 border-secondary-gold">
+                    <img src="https://placehold.co/100x100/fcd34d/1f2937?text=MC" alt="Portrait de Marc Charon" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover shadow-inner">
                     <h3 class="text-md font-bold text-gray-900 leading-tight">Marc Charon</h3>
-                    <p class="text-xs text-primary-blue font-medium mt-1">Conseiller</p>
+                    <p class="text-xs text-primary-blue font-semibold mt-1">Conseiller</p>
                 </div>
                 <!-- Membre 6: Colistière (Mock) -->
-                 <div class="text-center p-4 bg-white rounded-xl shadow-md border-t-2 border-primary-blue">
-                    <img src="https://placehold.co/100x100/1e40af/f9fafb?text=LS" alt="Portrait de Léa Simon" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover">
+                 <div class="text-center p-4 bg-bg-light rounded-xl shadow-lg border-t-4 border-primary-blue">
+                    <img src="https://placehold.co/100x100/1e40af/f9fafb?text=LS" alt="Portrait de Léa Simon" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover shadow-inner">
                     <h3 class="text-md font-bold text-gray-900 leading-tight">Léa Simon</h3>
-                    <p class="text-xs text-primary-blue font-medium mt-1">Conseillère</p>
+                    <p class="text-xs text-primary-blue font-semibold mt-1">Conseillère</p>
                 </div>
             </div>
             
@@ -297,7 +307,7 @@
     <section id="impliquer" class="py-20 bg-primary-blue">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl font-extrabold text-white mb-4">Rejoignez le Mouvement pour Cap d'Ail !</h2>
-            <p class="text-xl text-blue-100 mb-10 max-w-4xl mx-auto font-light">
+            <p class="text-xl text-blue-200 mb-10 max-w-4xl mx-auto font-light">
                 Chaque voix, chaque aide, est essentielle. Ensemble, nous bâtirons l'avenir de notre commune.
             </p>
             <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -308,7 +318,7 @@
     </section>
 
     <!-- 7. PIED DE PAGE (FOOTER) - Design moderne et sobre -->
-    <footer class="bg-gray-800 text-white py-10">
+    <footer class="bg-gray-900 text-white py-10">
         <div class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
             <!-- Colonne 1: Branding et Mentions -->
             <div class="col-span-2 md:col-span-1">
@@ -339,13 +349,22 @@
                 </ul>
             </div>
 
-            <!-- Colonne 4: Réseaux Sociaux -->
+            <!-- Colonne 4: Réseaux Sociaux (Mise en évidence) -->
             <div>
                 <h4 class="text-md font-bold mb-3 text-secondary-gold uppercase tracking-wider">Nous Suivre</h4>
                 <div class="flex space-x-4">
-                    <a href="https://facebook.com/XavierBeckCapdAil" target="_blank" class="text-gray-400 hover:text-primary-blue bg-white rounded-full p-1 transition duration-150"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3 8h-2v2h2v3h-3v-3h-2V9h2V7c0-1.66 1.34-3 3-3h2v3h-2c-.55 0-1 .45-1 1v1h3l-.4 3z"/></svg></a>
-                    <a href="https://instagram.com/XavierBeckCapdAil" target="_blank" class="text-gray-400 hover:text-pink-600 bg-white rounded-full p-1 transition duration-150"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c-3.1 0-3.56.01-4.8.07-1.25.06-2.14.24-2.88.53-.74.29-1.39.69-2.02 1.32-.63.63-1.03 1.28-1.32 2.02-.29.74-.47 1.63-.53 2.88C2.01 8.44 2 8.9 2 12s.01 3.56.07 4.8c.06 1.25.24 2.14.53 2.88.29.74.69 1.39 1.32 2.02.63.63 1.28 1.03 2.02 1.32.74.29 1.63.47 2.88.53C8.44 21.99 8.9 22 12 22s3.56-.01 4.8-.07c1.25-.06 2.14-.24 2.88-.53.74-.29 1.39-.69 2.02-1.32.63-.63 1.28-1.03 2.02-1.32.74-.29 1.63-.47 2.88-.53C21.99 15.56 22 15.1 22 12s-.01-3.56-.07-4.8c-.06-1.25-.24-2.14-.53-2.88-.29-.74-.69-1.39-1.32-2.02-.63-.63-1.28-1.03-2.02-1.32-.74-.29-1.63-.47-2.88-.53C15.56 2.01 15.1 2 12 2zm0 1.96c3.08 0 3.48.01 4.7.07 1.15.06 1.74.22 2.13.38.4.16.7.35.98.63.28.28.47.58.63.98.16.39.32.98.38 2.13.06 1.22.07 1.62.07 4.7s-.01 3.48-.07 4.7c-.06 1.15-.22 1.74-.38 2.13-.16.4-.35.7-.63.98-.28.28-.58.47-.98.63-.39.16-.98.32-2.13.38-1.22.06-1.62.07-4.7.07s-3.48-.01-4.7-.07c-1.15-.06-1.74-.22-2.13-.38-.4-.16-.7-.35-.98-.63-.28-.28-.58-.47-.98-.63-.39-.16-.98-.32-2.13-.38-1.22-.06-1.62-.07-4.7-.07s-3.48.01-4.7.07c-1.15.06-1.74.22-2.13.38.4-.16.7-.35.98-.63.28-.28.58-.47.98-.63.39-.16.98-.32 2.13-.38 1.22-.06 1.62-.07 4.7-.07zm0 2.87c-3.1 0-5.61 2.51-5.61 5.61s2.51 5.61 5.61 5.61 5.61-2.51 5.61-5.61-2.51-5.61-5.61-5.61zm0 9.25c-2.01 0-3.64-1.63-3.64-3.64s1.63-3.64 3.64-3.64 3.64 1.63 3.64 3.64-1.63 3.64-3.64 3.64zm5.02-9.28c.4 0 .73-.33.73-.73s-.33-.73-.73-.73-.73.33-.73.73.33.73.73.73z"/></svg></a>
-                    <a href="https://twitter.com/XavierBeckCapdAil" target="_blank" class="text-gray-400 hover:text-primary-blue bg-white rounded-full p-1 transition duration-150"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.261 8.52 11.458H16.27l-6.843-8.686L3.924 22.75H0.44l7.653-8.777L0.864 2.25h3.58l5.404 7.822 6.758-7.822h2.072zM10.746 16.326l-1.636-1.398-6.046 5.822H6.974l4.125-4.704zM16.233 7.234L14.41 5.05H8.76l1.205 1.543 5.483 7.078 1.635-1.398L16.233 7.234z"/></svg></a>
+                    <!-- Facebook -->
+                    <a href="https://facebook.com/XavierBeckCapdAil" target="_blank" class="text-gray-900 bg-secondary-gold rounded-full p-2 transition duration-150 hover:opacity-80">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3 8h-2v2h2v3h-3v-3h-2V9h2V7c0-1.66 1.34-3 3-3h2v3h-2c-.55 0-1 .45-1 1v1h3l-.4 3z"/></svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://instagram.com/XavierBeckCapdAil" target="_blank" class="text-gray-900 bg-secondary-gold rounded-full p-2 transition duration-150 hover:opacity-80">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2c-3.1 0-3.56.01-4.8.07-1.25.06-2.14.24-2.88.53-.74.29-1.39.69-2.02 1.32-.63.63-1.03 1.28-1.32 2.02-.29.74-.47 1.63-.53 2.88C2.01 8.44 2 8.9 2 12s.01 3.56.07 4.8c.06 1.25.24 2.14.53 2.88.29.74.69 1.39 1.32 2.02.63.63 1.28 1.03 2.02 1.32.74.29 1.63.47 2.88.53C8.44 21.99 8.9 22 12 22s3.56-.01 4.8-.07c1.25-.06 2.14-.24 2.88-.53.74-.29 1.39-.69 2.02-1.32.63-.63 1.28-1.03 2.02-1.32.74-.29 1.63-.47 2.88-.53C21.99 15.56 22 15.1 22 12s-.01-3.56-.07-4.8c-.06-1.25-.24-2.14-.53-2.88-.29-.74-.69-1.39-1.32-2.02-.63-.63-1.28-1.03-2.02-1.32-.74-.29-1.63-.47-2.88-.53C15.56 2.01 15.1 2 12 2zm0 1.96c3.08 0 3.48.01 4.7.07 1.15.06 1.74.22 2.13.38.4.16.7.35.98.63.28.28.47.58.63.98.16.39.32.98.38 2.13.06 1.22.07 1.62.07 4.7s-.01 3.48-.07 4.7c-.06 1.15-.22 1.74-.38 2.13-.16.4-.35.7-.63.98-.28.28-.58.47-.98.63-.39.16-.98.32-2.13.38-1.22.06-1.62.07-4.7.07s-3.48-.01-4.7-.07c-1.15-.06-1.74-.22-2.13-.38-.4-.16-.7-.35-.98-.63-.28-.28-.58-.47-.98-.63-.39-.16-.98-.32-2.13-.38-1.22-.06-1.62-.07-4.7-.07s-3.48.01-4.7.07c-1.15.06-1.74.22-2.13.38.4-.16.7-.35.98-.63.28-.28.58-.47.98-.63.39-.16.98-.32 2.13-.38 1.22-.06 1.62-.07 4.7-.07zm0 2.87c-3.1 0-5.61 2.51-5.61 5.61s2.51 5.61 5.61 5.61 5.61-2.51 5.61-5.61-2.51-5.61-5.61-5.61zm0 9.25c-2.01 0-3.64-1.63-3.64-3.64s1.63-3.64 3.64-3.64 3.64 1.63 3.64 3.64-1.63 3.64-3.64 3.64zm5.02-9.28c.4 0 .73-.33.73-.73s-.33-.73-.73-.73-.73.33-.73.73.33.73.73.73z"/></svg>
+                    </a>
+                    <!-- Twitter / X -->
+                    <a href="https://twitter.com/XavierBeckCapdAil" target="_blank" class="text-gray-900 bg-secondary-gold rounded-full p-2 transition duration-150 hover:opacity-80">
+                         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.261 8.52 11.458H16.27l-6.843-8.686L3.924 22.75H0.44l7.653-8.777L0.864 2.25h3.58l5.404 7.822 6.758-7.822h2.072zM10.746 16.326l-1.636-1.398-6.046 5.822H6.974l4.125-4.704zM16.233 7.234L14.41 5.05H8.76l1.205 1.543 5.483 7.078 1.635-1.398L16.233 7.234z"/></svg>
+                    </a>
                 </div>
             </div>
         </div>
