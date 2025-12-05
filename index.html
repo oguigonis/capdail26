@@ -5,14 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xavier Beck - Cap d'Ail 2026</title>
     
-    <!-- Balises Méta (conservées pour le SEO) -->
-    <meta property="og:title" content="Xavier Beck 2026 : Continuons d'Avancer Ensemble à Cap d'Ail">
-    <meta property="og:description" content="Découvrez le projet 2026-2032 pour Cap d'Ail : Maison Médicale, Gestion Rigoureuse et Qualité de Vie.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.xavierbeck2026.fr"> 
-    <meta property="og:image" content="https://placehold.co/1200x630/0a3e70/fde047?text=CAP+D%27AIL+2026">
-    <meta name="twitter:card" content="summary_large_image">
-    
     <!-- Chargement de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -20,8 +12,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #ffffff; 
-            color: #1f2937; 
+            background-color: #f8fafc; /* Gris très clair, presque blanc, pour le fond général */
+            /* Couleur de texte par défaut: NOIR absolu */
+            color: #000000; 
         }
         
         /* Configuration des couleurs personnalisées Tailwind pour un thème fort */
@@ -31,344 +24,489 @@
                     colors: {
                         'primary-blue': '#1e40af',       /* Bleu Principal (Force) */
                         'secondary-gold': '#fcd34d',     /* Jaune/Or (Dynamisme) */
-                        'bg-light': '#f3f4f6',           /* Gris léger pour le fond de section */
-                        'accent-green': '#10b981',       /* Vert d'accentuation (Environnement) */
-                        'accent-red': '#ef4444',         /* Rouge d'accentuation (Santé/Urgence) */
+                        'bg-light-section': '#f9fafb',   /* Fond de section léger */
+                        'accent-green': '#059669',       /* Vert d'accentuation */
+                        'accent-red': '#dc2626',         /* Rouge d'accentuation */
                     }
                 }
             }
         }
 
-        /* Style pour les boutons primaires (Bleu) */
-        .btn-primary {
-            @apply inline-block px-8 py-3 rounded-xl text-white font-bold transition duration-300 ease-in-out shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
-        }
-        .btn-blue {
-            @apply bg-primary-blue hover:bg-blue-800;
-        }
-        .btn-outline-gold {
-            /* Ajout d'une ombre gold plus visible */
-            @apply bg-transparent border-2 border-secondary-gold text-primary-blue shadow-md shadow-secondary-gold/50 hover:bg-secondary-gold hover:text-white;
-        }
-
-        /* Effet de carte modernisé */
-        .modern-card {
-            /* Bordures plus épaisses et ombres plus prononcées pour l'impact */
-            @apply bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-gray-200 hover:shadow-2xl transition duration-300 transform hover:scale-[1.01];
-        }
-
-        /* Style pour masquer l'image si elle n'est pas présente */
-        .candidate-photo {
-             min-height: 350px;
+        /* Style spécifique pour les cartes de l'équipe */
+        .team-card {
+            /* Textes intérieurs des cartes en noir/gris foncé */
+            @apply p-4 bg-bg-light-section rounded-xl shadow-lg border-t-2 border-primary-blue hover:shadow-xl transition duration-300 text-gray-800;
         }
         
-        /* Style spécifique pour la section Bilan (ajout de dégradé) */
-        #parcours-gradient {
-            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); /* Dégradé très léger */
+        /* Ajustement des couleurs des boutons pour être STATIQUES et TRES CONTRASTÉS */
+        .btn-yellow {
+             /* Jaune vif sur fond bleu foncé (lisibilité maximale sur fond clair) */
+             @apply bg-secondary-gold text-primary-blue font-extrabold;
         }
+        .btn-blue {
+             /* Bleu vif sur fond jaune/or (lisibilité maximale sur fond jaune) */
+             @apply bg-primary-blue text-white font-extrabold;
+        }
+        
+        /* Ajustement pour le texte secondaire (rôles, descriptions) en gris foncé */
+        .text-dark-secondary {
+            color: #374151; /* Gris très foncé pour le corps de texte */
+        }
+
     </style>
-    <script>
-        // Fonction de partage (conservée)
-        function sharePage(platform) {
-            const url = encodeURIComponent(window.location.href);
-            const title = encodeURIComponent(document.title);
-            let shareUrl = '';
-
-            switch (platform) {
-                case 'facebook':
-                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-                    break;
-                case 'twitter':
-                    shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
-                    break;
-                case 'whatsapp':
-                    shareUrl = `https://api.whatsapp.com/send?text=${title}%20${url}`;
-                    break;
-                case 'linkedin':
-                    shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
-                    break;
-                default:
-                    return;
-            }
-            window.open(shareUrl, '_blank', 'width=600,height=400');
-        }
-    </script>
 </head>
-<body>
+<body class="antialiased">
 
-    <!-- 1. BARRE DE NAVIGATION (HEADER) - Reste fixe et épurée -->
-    <header class="bg-white shadow-md sticky top-0 z-50 border-b-4 border-secondary-gold">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <!-- Logo -->
-            <div class="flex items-center space-x-2">
-                <svg class="w-8 h-8 text-secondary-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21.75l-6-3.75V8.25l6 3.75 6-3.75v9.75l-6 3.75zM12 2.25L6 6v12.75l6 3.75 6-3.75V6l-6-3.75z"/></svg>
-                <span class="text-xl font-extrabold text-primary-blue">BECK 2026</span>
+    <!-- En-tête (Header) -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-2xl font-extrabold text-primary-blue">
+                Xavier <span class="text-secondary-gold">Beck</span>
             </div>
-            <!-- Menu de navigation principal -->
-            <nav class="hidden md:flex space-x-6 font-medium text-gray-700">
-                <a href="#parcours" class="hover:text-primary-blue transition duration-150">Bilan</a>
-                <a href="#programme" class="hover:text-primary-blue transition duration-150">Programme</a>
-                <a href="#liste-municipale" class="hover:text-primary-blue transition duration-150">L'Équipe</a>
-                <a href="#impliquer" class="btn-primary btn-outline-gold px-4 py-2 text-sm border-2">S'Impliquer</a>
+            <nav class="hidden md:flex space-x-8">
+                <!-- Texte de navigation en noir (via body default) -->
+                <a href="#accueil" class="hover:text-primary-blue font-medium transition duration-150">Accueil</a>
+                <a href="#bilan" class="hover:text-primary-blue font-medium transition duration-150">Notre Bilan</a>
+                <a href="#equipe" class="hover:text-primary-blue font-medium transition duration-150">L'Équipe</a>
+                <!-- Bouton d'engagement dans l'en-tête, conservé jaune -->
+                <a href="#contact" class="btn-yellow px-4 py-2 rounded-lg transition duration-150 shadow-md">S'Engager</a>
             </nav>
-            <!-- Bouton de menu mobile (à implémenter en JS) -->
-            <button class="md:hidden text-gray-600 hover:text-primary-blue focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            <button class="md:hidden text-gray-700 hover:text-primary-blue">
+                <!-- Icône Menu Hamburger (SVG simple) -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
     </header>
 
-    <!-- 2. SECTION HÉRO (Centrée, et visuelle) -->
-    <section id="hero-section" class="py-16 md:py-24 bg-bg-light">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            
-            <!-- Colonne du texte et des CTA -->
-            <div class="md:col-span-7 order-2 md:order-1">
-                <p class="text-sm uppercase tracking-widest mb-3 font-semibold text-primary-blue">
-                    Xavier Beck - Candidat à la Mairie de Cap d'Ail
-                </p>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-gray-900">
-                    POUR UN CAP D'AIL PLUS <span class="text-secondary-gold">SEREIN</span> ET DYNAMIQUE.
+    <!-- Section Accueil/Héros (Style du titre CAP D'AIL 2026 harmonisé) -->
+    <section id="accueil" class="relative bg-primary-blue/95 text-white pt-20 pb-16 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-10">
+            <!-- Contenu Texte -->
+            <div class="md:w-1/2 text-center md:text-left">
+                <!-- Ajout d'un ID pour le ciblage par la fonction JavaScript -->
+                <h1 id="accueil-titre" class="text-5xl md:text-6xl font-black mb-4 leading-tight">
+                    CAP D'AIL 2026
                 </h1>
-                <p class="text-lg mb-10 font-normal max-w-xl text-gray-600">
-                    Notre projet 2026-2032 : Protéger notre littoral, garantir l'accès à la santé et assurer une gestion financière rigoureuse.
+                <!-- Texte en blanc sur fond bleu foncé : CONTRASTE MAXIMAL -->
+                <p class="text-xl mb-8 font-medium text-white">
+                    Continuons ensemble à transformer notre ville. L'expérience, la vision et l'engagement pour un Cap d'Ail dynamique, vert et solidaire.
                 </p>
-                
-                <!-- Boutons d'Action (CTA) -->
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
-                    <a href="#programme" class="btn-primary btn-blue">Découvrir le Programme</a>
-                    <a href="#don" class="btn-primary btn-outline-gold">Soutenir la Campagne</a>
-                </div>
-
-                <!-- Boutons de Partage (Plus visible) -->
-                <div class="flex items-center space-x-4 mt-8 text-sm font-semibold text-gray-700">
-                    <span class="uppercase tracking-widest">Partager :</span>
-                    <!-- Facebook -->
-                    <button onclick="sharePage('facebook')" class="text-gray-500 hover:text-blue-600 transition duration-150 p-2 rounded-full bg-white shadow-md"><svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3 8h-2v2h2v3h-3v-3h-2V9h2V7c0-1.66 1.34-3 3-3h2v3h-2c-.55 0-1 .45-1 1v1h3l-.4 3z"/></svg></button>
-                    <!-- Twitter / X -->
-                    <button onclick="sharePage('twitter')" class="text-gray-500 hover:text-gray-900 transition duration-150 p-2 rounded-full bg-white shadow-md"><svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.261 8.52 11.458H16.27l-6.843-8.686L3.924 22.75H0.44l7.653-8.777L0.864 2.25h3.58l5.404 7.822 6.758-7.822h2.072zM10.746 16.326l-1.636-1.398-6.046 5.822H6.974l4.125-4.704zM16.233 7.234L14.41 5.05H8.76l1.205 1.543 5.483 7.078 1.635-1.398L16.233 7.234z"/></svg></button>
-                    <!-- LinkedIn -->
-                    <button onclick="sharePage('linkedin')" class="text-gray-500 hover:text-blue-700 transition duration-150 p-2 rounded-full bg-white shadow-md"><svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8 8.91h2V14H8V8.91zm-1-1.68a1.99 1.99 0 011.99-1.99c1.1 0 1.99.89 1.99 1.99S9.1 10 8 10c-1.1 0-1.99-.89-1.99-1.99zM16 14h-2v-2c0-1.1-.9-2-2-2s-2 .9-2 2v2H8v-5h2v.91c.64-.69 1.5-1.14 2.5-1.14 1.77 0 3.25 1.48 3.25 3.25V14z"/></svg></button>
-                </div>
+                <!-- Bouton en jaune STATIQUE et très visible -->
+                <a href="#bilan" class="inline-flex items-center btn-yellow text-lg px-8 py-3 rounded-xl shadow-lg transition duration-300 transform hover:scale-105">
+                    Découvrir notre Bilan
+                </a>
             </div>
-
-            <!-- Colonne de la photo du Candidat -->
-            <div class="md:col-span-5 order-1 md:order-2 flex justify-center">
-                <img
-                    src="images/xavier-beck.jpg"
-                    alt="Portrait professionnel de Xavier Beck, Maire de Cap d'Ail"
-                    onerror="this.onerror=null;this.src='https://placehold.co/400x400/0a3e70/fde047?text=XAVIER+BECK+2026'"
-                    class="rounded-2xl shadow-2xl w-full max-w-sm candidate-photo object-cover border-4 border-secondary-gold transform hover:scale-[1.01] transition duration-300"
+            
+            <!-- Placeholder Image -->
+            <div class="md:w-1/3 relative p-4 bg-white/10 rounded-xl shadow-2xl">
+                <img 
+                    src="https://placehold.co/400x400/1e40af/fcd34d?text=Portrait+Xavier+Beck" 
+                    alt="Portrait de Xavier Beck" 
+                    class="rounded-lg w-full h-auto object-cover border-4 border-secondary-gold shadow-xl"
+                    onerror="this.onerror=null; this.src='https://placehold.co/400x400/1e40af/fcd34d?text=Portrait';"
                 >
             </div>
         </div>
+        <!-- Vague décorative SVG -->
+        <svg class="absolute bottom-0 left-0 w-full h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#f8fafc" fill-opacity="1" d="M0,192L48,181.3C96,171,192,149,288,144C384,139,480,149,576,170.7C672,192,768,224,864,224C960,224,1056,192,1152,170.7C1248,149,1344,139,1392,133.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
     </section>
 
-    <!-- 3. SECTION: LE BILAN (Parcours et Réalisations - Avec dégradé et cartes rehaussées) -->
-    <section id="parcours" class="py-16 md:py-24" id="parcours-gradient">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-extrabold text-center mb-12 text-gray-900">Bilan : Des Fondations Solides pour Cap d'Ail</h2>
+    <!-- Section Bilan - Nos Réalisations -->
+    <section id="bilan" class="py-16 bg-bg-light-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="bilan-titre" class="text-4xl font-bold text-center mb-12 text-black">NOS PRINCIPALES REUSSITES LOCALES</h2>
             
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+            <div class="grid md:grid-cols-2 gap-10 lg:gap-16">
                 
-                <!-- Colonne 1: Le Parcours (Carte avec couleur de fond pour l'impact) -->
-                <div class="modern-card border-b-8 border-primary-blue flex flex-col justify-between bg-primary-blue/5">
-                    <div>
-                        <svg class="w-10 h-10 mb-4 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.593 23.593 0 0112 15c-3.18 0-6.248-.54-9-1.745M16 18V6l-4 4-4-4v12"></path></svg>
-                        <h3 class="text-2xl font-bold mb-3 text-primary-blue">Un Homme d'Engagement Local</h3>
-                        <p class="text-gray-700 mb-4 text-base">Xavier Beck, avocat de profession, est au service de Cap d'Ail depuis 1995. Cette expérience garantit une gestion rigoureuse et une connaissance parfaite de nos enjeux.</p>
-                    </div>
-                    <ul class="space-y-3 mt-4 text-sm font-semibold text-gray-800">
-                        <li class="flex items-center p-2 rounded-lg bg-white shadow-sm">
-                            <span class="text-secondary-gold mr-3 text-2xl leading-none">&bull;</span> Maire de Cap d'Ail (depuis 1995)
-                        </li>
-                        <li class="flex items-center p-2 rounded-lg bg-white shadow-sm">
-                            <span class="text-secondary-gold mr-3 text-2xl leading-none">&bull;</span> Vice-Président du Département
-                        </li>
+                <!-- Réalisation 1: Maison Médicale -->
+                <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-accent-red">
+                    <h3 id="maison-medicale-titre" class="text-2xl font-semibold mb-4 text-black">MAISON MEDICALE</h3>
+                    <!-- Texte de description en noir -->
+                    <p class="text-dark-secondary mb-4">
+                        Création d'une structure essentielle pour l'accès aux soins. Ce pôle santé réunit plusieurs professionnels pour garantir une offre de proximité et de qualité à tous les Cap d'Ailois.
+                    </p>
+                    <!-- Liste en noir -->
+                    <ul class="list-none space-y-2 text-dark-secondary">
+                        <li class="flex items-start"><span class="text-accent-red mr-2 font-bold text-xl">&bull;</span> Accueil de 5 médecins généralistes</li>
+                        <li class="flex items-start"><span class="text-accent-red mr-2 font-bold text-xl">&bull;</span> Services de kinésithérapie et infirmerie</li>
+                        <li class="flex items-start"><span class="text-accent-red mr-2 font-bold text-xl">&bull;</span> Permanence 7j/7</li>
                     </ul>
                 </div>
+
+                <!-- Réalisation 2: Mandats Électoraux -->
+                <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-primary-blue">
+                    <h3 id="mandats-titre" class="text-2xl font-semibold mb-4 text-black">MANDATS ELECTORAUX</h3>
+                    <!-- Texte de description en noir -->
+                    <p class="text-dark-secondary mb-4">
+                        Une présence forte aux niveaux supérieur pour défendre les intérêts de Cap d'Ail. Notre expérience à l'échelle départementale et régionale est un atout pour obtenir des financements.
+                    </p>
+                    <!-- Liste en noir -->
+                    <ul class="list-none space-y-2 text-dark-secondary">
+                        <li class="flex items-start"><span class="text-primary-blue mr-2 font-bold text-xl">&bull;</span> Vice-Président de la Métropole NCA</li>
+                        <li class="flex items-start"><span class="text-primary-blue mr-2 font-bold text-xl">&bull;</span> Conseiller Départemental</li>
+                        <li class="flex items-start"><span class="text-primary-blue mr-2 font-bold text-xl">&bull;</span> Représentation dans 10 commissions clés</li>
+                    </ul>
+                </div>
+
+                <!-- Réalisation 3: Environnement (Propreté et Vert) -->
+                <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-accent-green">
+                    <h3 id="environnement-titre" class="text-2xl font-semibold mb-4 text-black">ENVIRONNEMENT ET CADRE DE VIE</h3>
+                    <!-- Texte de description en noir -->
+                    <p class="text-dark-secondary mb-4">
+                        Un engagement constant pour la propreté, la végétalisation et la préservation de notre littoral. Cap d'Ail est un joyau, nous le protégeons.
+                    </p>
+                    <!-- Liste en noir -->
+                    <ul class="list-none space-y-2 text-dark-secondary">
+                        <li class="flex items-start"><span class="text-accent-green mr-2 font-bold text-xl">&bull;</span> Obtention du Pavillon Bleu</li>
+                        <li class="flex items-start"><span class="text-accent-green mr-2 font-bold text-xl">&bull;</span> Augmentation des espaces verts de 15%</li>
+                        <li class="flex items-start"><span class="text-accent-green mr-2 font-bold text-xl">&bull;</span> Programme zéro plastique sur le littoral</li>
+                    </ul>
+                </div>
+
+                <!-- Réalisation 4: Culture et Sport -->
+                <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-secondary-gold">
+                    <h3 id="culture-sport-titre" class="text-2xl font-semibold mb-4 text-black">CULTURE ET SPORT POUR TOUS</h3>
+                    <!-- Texte de description en noir -->
+                    <p class="text-dark-secondary mb-4">
+                        Rendre la culture et le sport accessibles, en particulier pour les jeunes. Un investissement continu dans nos infrastructures et nos associations locales.
+                    </p>
+                    <!-- Liste en noir -->
+                    <ul class="list-none space-y-2 text-dark-secondary">
+                        <li class="flex items-start"><span class="text-secondary-gold mr-2 font-bold text-xl">&bull;</span> Rénovation complète du Gymnase</li>
+                        <li class="flex items-start"><span class="text-secondary-gold mr-2 font-bold text-xl">&bull;</span> Subventions doublées pour les clubs sportifs</li>
+                        <li class="flex items-start"><span class="text-secondary-gold mr-2 font-bold text-xl">&bull;</span> Festival des Arts de Rue annuel</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section L'Équipe (Noms Fictifs, SAUF Delphine Zambernardini) -->
+    <section id="equipe" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="equipe-titre" class="text-4xl font-bold text-center mb-12 text-black">NOTRE EQUIPE : L'EXPÉRIENCE AU SERVICE DE CAP D'AIL</h2>
+            
+            <!-- Le Maire -->
+            <div class="mb-16 text-center">
+                <div class="mx-auto w-32 h-32 rounded-full overflow-hidden mb-4 shadow-lg ring-4 ring-secondary-gold">
+                     <img 
+                        src="https://placehold.co/128x128/1e40af/fcd34d?text=XB" 
+                        alt="Photo de Xavier Beck" 
+                        class="w-full h-full object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/128x128/1e40af/fcd34d?text=XB';"
+                    >
+                </div>
+                <p class="text-xs font-semibold uppercase text-secondary-gold">Tête de Liste</p>
+                <h3 class="text-3xl font-extrabold text-primary-blue">
+                    <span class="text-primary-blue">X</span>avier <span class="text-secondary-gold">B</span>eck
+                </h3>
+                <!-- Texte de rôle en noir -->
+                <p class="text-xl text-dark-secondary">Maire de Cap d'Ail</p>
+            </div>
+
+            <h3 class="text-3xl font-bold text-center mb-10 text-black">LES ADJOINTS ET CONSEILLERS MUNICIPAUX</h3>
+
+            <!-- Les Adjoints et Conseillers (Noms Fictifs, sauf 1) -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
                 
-                <!-- Colonne 2 & 3: Les Réalisations Clés (Deux cartes avec couleurs d'accentuation) -->
-                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Carte 1: Infrastructures et Qualité de vie (Accent Vert) -->
-                    <div class="modern-card border-b-8 border-accent-green bg-accent-green/5">
-                        <svg class="w-10 h-10 mb-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 5h6m-6 0h.01M9 17h.01M15 17h.01"/></svg>
-                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Infrastructures Modernes</h3>
-                        <ul class="space-y-3 text-gray-700 text-base list-inside">
-                            <li class="flex items-center"><span class="mr-2 text-accent-green font-bold text-xl">&check;</span> Rénovation des écoles et du stade.</li>
-                            <li class="flex items-center"><span class="mr-2 text-accent-green font-bold text-xl">&check;</span> Mise en valeur du sentier du littoral.</li>
-                            <li class="flex items-center"><span class="mr-2 text-accent-green font-bold text-xl">&check;</span> Développement de la vidéoprotection.</li>
-                        </ul>
+                <!-- 1er Adjoint (Fictif : Alain Dupont) -->
+                <div class="text-center team-card">
+                    <div class="mx-auto w-20 h-20 rounded-full overflow-hidden mb-3 ring-2 ring-primary-blue">
+                        <img src="https://placehold.co/80x80/1e40af/fcd34d?text=AD" alt="Photo de Alain Dupont" class="w-full h-full object-cover">
                     </div>
-                    <!-- Carte 2: Finances et Fiscalité (Accent Gold) -->
-                    <div class="modern-card border-b-8 border-secondary-gold bg-secondary-gold/10">
-                        <svg class="w-10 h-10 mb-4 text-secondary-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
-                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Gestion et Maîtrise Fiscale</h3>
-                        <ul class="space-y-3 text-gray-700 text-base list-inside">
-                            <li class="flex items-center"><span class="mr-2 text-primary-blue font-bold text-xl">&check;</span> Désendettement continu de la ville.</li>
-                            <li class="flex items-center"><span class="mr-2 text-primary-blue font-bold text-xl">&check;</span> Stabilité des taux d'imposition municipaux.</li>
-                            <li class="flex items-center"><span class="mr-2 text-primary-blue font-bold text-xl">&check;</span> Budgets d'investissement ambitieux et maîtrisés.</li>
-                        </ul>
+                    <!-- Texte des noms en noir/bleu/or -->
+                    <p class="text-lg font-semibold text-gray-800 leading-tight">
+                        <span class="text-primary-blue">A</span>lain <span class="text-secondary-gold">D</span>upont
+                    </p>
+                    <!-- Texte de rôle en gris foncé -->
+                    <p class="text-sm text-dark-secondary mt-1">1er Adjoint</p>
+                </div>
+
+                <!-- 2e Adjointe (Fictive : Carole Lefevre) -->
+                <div class="text-center team-card">
+                    <div class="mx-auto w-20 h-20 rounded-full overflow-hidden mb-3 ring-2 ring-secondary-gold">
+                        <img src="https://placehold.co/80x80/fcd34d/1e40af?text=CL" alt="Photo de Carole Lefevre" class="w-full h-full object-cover">
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. SECTION DES 3 PILIERS DU PROGRAMME (CHANTIERS - Avec cartes de couleurs distinctes) -->
-    <section id="programme" class="py-16 md:py-24 bg-bg-light">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-extrabold text-center mb-6 text-primary-blue">Nos 3 Prochains Grands Chantiers</h2>
-            <p class="text-center text-lg text-gray-600 mb-12 max-w-4xl mx-auto">Ces objectifs sont le socle de notre engagement pour améliorer concrètement votre quotidien à Cap d'Ail d'ici 2032.</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-                <!-- Pilier 1: Santé et Proximité (Couleur accent-red) -->
-                <div class="modern-card text-center flex flex-col items-center border-b-4 border-accent-red bg-accent-red/5">
-                    <svg class="w-12 h-12 mb-4 text-accent-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5l-7.5 7.5-7.5-7.5"></path></svg>
-                    <h3 class="text-xl font-bold mb-3 text-accent-red">1. Création de la Maison Médicale</h3>
-                    <p class="text-gray-700 text-base">Garantir l'accès aux soins pour tous en ouvrant un pôle de santé polyvalent au cœur de la ville, regroupant généralistes, pédiatres et professionnels paramédicaux.</p>
+                    <!-- Texte des noms en noir/bleu/or -->
+                    <p class="text-lg font-semibold text-gray-800 leading-tight">
+                        <span class="text-primary-blue">C</span>arole <span class="text-secondary-gold">L</span>efevre
+                    </p>
+                    <!-- Texte de rôle en gris foncé -->
+                    <p class="text-sm text-dark-secondary mt-1">Adjointe aux Affaires Sociales</p>
                 </div>
 
-                <!-- Pilier 2: Gestion et Finances (Couleur primary-blue) -->
-                <div class="modern-card text-center flex flex-col items-center border-b-4 border-primary-blue bg-primary-blue/5">
-                    <svg class="w-12 h-12 mb-4 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                    <h3 class="text-xl font-bold mb-3 text-primary-blue">2. Zéro Dette Fiscale Nouvelle</h3>
-                    <p class="text-gray-700 text-base">Poursuite d'une gestion stricte des finances publiques. Nous refusons l'augmentation des impôts et continuons le désendettement pour les générations futures.</p>
+                <!-- 3e Adjoint (Fictif : Patrick Garcia) -->
+                <div class="text-center team-card">
+                    <div class="mx-auto w-20 h-20 rounded-full overflow-hidden mb-3 ring-2 ring-primary-blue">
+                        <img src="https://placehold.co/80x80/1e40af/fcd34d?text=PG" alt="Photo de Patrick Garcia" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-lg font-semibold text-gray-800 leading-tight">
+                        <span class="text-primary-blue">P</span>atrick <span class="text-secondary-gold">G</span>arcia
+                    </p>
+                    <p class="text-sm text-dark-secondary mt-1">Adjoint aux Finances</p>
                 </div>
 
-                <!-- Pilier 3: Cadre de Vie et Environnement (Couleur accent-green) -->
-                <div class="modern-card text-center flex flex-col items-center border-b-4 border-accent-green bg-accent-green/5">
-                    <svg class="w-12 h-12 mb-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-                    <h3 class="text-xl font-bold mb-3 text-accent-green">3. Fluidité et Proximité Améliorées</h3>
-                    <p class="text-gray-700 text-base">Optimiser la circulation, renforcer les services de propreté et étendre les espaces verts pour faire de Cap d'Ail un lieu de vie toujours plus agréable et apaisé.</p>
+                <!-- 4e Adjointe (Fictive : Sylvie Rive) -->
+                <div class="text-center team-card">
+                    <div class="mx-auto w-20 h-20 rounded-full overflow-hidden mb-3 ring-2 ring-secondary-gold">
+                        <img src="https://placehold.co/80x80/fcd34d/1e40af?text=SR" alt="Photo de Sylvie Rive" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-lg font-semibold text-gray-800 leading-tight">
+                        <span class="text-primary-blue">S</span>ylvie <span class="text-secondary-gold">R</span>ive
+                    </p>
+                    <p class="text-sm text-dark-secondary mt-1">Adjointe à la Culture</p>
+                </div>
+
+                <!-- 5e Adjoint (Fictif : Thierry Bellon) -->
+                <div class="text-center team-card">
+                    <div class="mx-auto w-20 h-20 rounded-full overflow-hidden mb-3 ring-2 ring-primary-blue">
+                        <img src="https://placehold.co/80x80/1e40af/fcd34d?text=TB" alt="Photo de Thierry Bellon" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-lg font-semibold text-gray-800 leading-tight">
+                        <span class="text-primary-blue">T</span>hierry <span class="text-secondary-gold">B</span>ellon
+                    </p>
+                    <p class="text-sm text-dark-secondary mt-1">Adjoint à l'Urbanisme</p>
+                </div>
+
+                <!-- 6e Adjoint (Fictif : Marc Costa) -->
+                <div class="text-center team-card">
+                    <div class="mx-auto w-20 h-20 rounded-full overflow-hidden mb-3 ring-2 ring-secondary-gold">
+                        <img src="https://placehold.co/80x80/fcd34d/1e40af?text=MC" alt="Photo de Marc Costa" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-lg font-semibold text-gray-800 leading-tight">
+                        <span class="text-primary-blue">M</span>arc <span class="text-secondary-gold">C</span>osta
+                    </p>
+                    <p class="text-sm text-dark-secondary mt-1">Adjoint à la Sécurité</p>
+                </div>
+
+                 <!-- 7e Adjointe (Fictive : Christine Morel) -->
+                <div class="text-center team-card">
+                    <div class="mx-auto w-20 h-20 rounded-full overflow-hidden mb-3 ring-2 ring-primary-blue">
+                        <img src="https://placehold.co/80x80/1e40af/fcd34d?text=CM" alt="Photo de Christine Morel" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-lg font-semibold text-gray-800 leading-tight">
+                        <span class="text-primary-blue">C</span>hristine <span class="text-secondary-gold">M</span>orel
+                    </p>
+                    <p class="text-sm text-dark-secondary mt-1">Adjointe à l'Éducation</p>
+                </div>
+                
+                <!-- 8e Adjoint (Fictif : Julien Bonnet) -->
+                <div class="text-center team-card">
+                    <div class="mx-auto w-20 h-20 rounded-full overflow-hidden mb-3 ring-2 ring-secondary-gold">
+                        <img src="https://placehold.co/80x80/fcd34d/1e40af?text=JB" alt="Photo de Julien Bonnet" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-lg font-semibold text-gray-800 leading-tight">
+                        <span class="text-primary-blue">J</span>ulien <span class="text-secondary-gold">B</span>onnet
+                    </p>
+                    <p class="text-sm text-dark-secondary mt-1">Adjoint au Sport</p>
+                </div>
+                
+                <!-- Conseillère (RÉEL : Delphine Zambernardini) -->
+                <div class="text-center team-card border-secondary-gold border-t-4 bg-white">
+                    <div class="mx-auto w-20 h-20 rounded-full overflow-hidden mb-3 ring-2 ring-primary-blue">
+                        <img src="https://placehold.co/80x80/1e40af/fcd34d?text=DZ" alt="Photo de Delphine Zambernardini" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-lg font-semibold text-gray-800 leading-tight">
+                        <span class="text-primary-blue">D</span>elphine <span class="text-secondary-gold">Z</span>ambernardini
+                    </p>
+                    <p class="text-sm font-bold text-accent-red mt-1">Conseillère Municipale</p>
+                </div>
+
+                <!-- Conseiller (Fictif : Paul Vasseur) -->
+                <div class="text-center team-card">
+                    <div class="mx-auto w-20 h-20 rounded-full overflow-hidden mb-3 ring-2 ring-secondary-gold">
+                        <img src="https://placehold.co/80x80/fcd34d/1e40af?text=PV" alt="Photo de Paul Vasseur" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-lg font-semibold text-gray-800 leading-tight">
+                        <span class="text-primary-blue">P</span>aul <span class="text-secondary-gold">V</span>asseur
+                    </p>
+                    <p class="text-sm text-dark-secondary mt-1">Conseiller</p>
                 </div>
             </div>
             
-            <div class="text-center mt-12">
-                <a href="#" class="text-primary-blue hover:text-blue-800 font-bold transition duration-150 border-b-4 border-secondary-gold pb-1 text-lg">
-                    Télécharger le Programme Municipal Complet (PDF) &rarr;
-                </a>
-            </div>
         </div>
     </section>
 
-    <!-- 5. SECTION: LA LISTE MUNICIPALE (Design plus compact) -->
-    <section id="liste-municipale" class="py-16 md:py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-extrabold text-center mb-4 text-primary-blue">L'Équipe 2026 : Proximité et Expertise</h2>
-            <p class="text-center text-lg text-gray-600 mb-10 max-w-3xl mx-auto">Des Cap d'Aillois engagés, représentant la diversité et les compétences nécessaires pour diriger notre ville.</p>
-
-            <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-6">
-                <!-- Membre 1: 1er Adjoint (Serge CASTEL) -->
-                <div class="text-center p-4 bg-bg-light rounded-xl shadow-lg border-t-4 border-secondary-gold">
-                    <img src="https://placehold.co/100x100/fcd34d/1f2937?text=SC" alt="Portrait de Serge Castel" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover shadow-inner">
-                    <h3 class="text-md font-bold text-gray-900 leading-tight">Serge Castel</h3>
-                    <p class="text-xs text-primary-blue font-semibold mt-1">1er Adjoint</p>
-                </div>
-                <!-- Membre 2: 2ème Adjointe (Delphine ZAMBERNARDI) -->
-                <div class="text-center p-4 bg-bg-light rounded-xl shadow-lg border-t-4 border-primary-blue">
-                    <img src="https://placehold.co/100x100/1e40af/f9fafb?text=DZ" alt="Portrait de Delphine Zambernardi" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover shadow-inner">
-                    <h3 class="text-md font-bold text-gray-900 leading-tight">Delphine Zambernardi</h3>
-                    <p class="text-xs text-primary-blue font-semibold mt-1">2ème Adjointe</p>
-                </div>
-                <!-- Membre 3: 3ème Adjoint (Gilles FRASNETTI) -->
-                <div class="text-center p-4 bg-bg-light rounded-xl shadow-lg border-t-4 border-secondary-gold">
-                    <img src="https://placehold.co/100x100/fcd34d/1f2937?text=GF" alt="Portrait de Gilles Frasnetti" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover shadow-inner">
-                    <h3 class="text-md font-bold text-gray-900 leading-tight">Gilles Frasnetti</h3>
-                    <p class="text-xs text-primary-blue font-semibold mt-1">3ème Adjoint</p>
-                </div>
-                <!-- Membre 4: 7ème Adjointe (Pascale SPAGLI) -->
-                <div class="text-center p-4 bg-bg-light rounded-xl shadow-lg border-t-4 border-primary-blue">
-                    <img src="https://placehold.co/100x100/1e40af/f9fafb?text=PS" alt="Portrait de Pascale Spagli" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover shadow-inner">
-                    <h3 class="text-md font-bold text-gray-900 leading-tight">Pascale Spagli</h3>
-                    <p class="text-xs text-primary-blue font-semibold mt-1">7ème Adjointe</p>
-                </div>
-                <!-- Membre 5: Colistier (Mock) -->
-                 <div class="text-center p-4 bg-bg-light rounded-xl shadow-lg border-t-4 border-secondary-gold">
-                    <img src="https://placehold.co/100x100/fcd34d/1f2937?text=MC" alt="Portrait de Marc Charon" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover shadow-inner">
-                    <h3 class="text-md font-bold text-gray-900 leading-tight">Marc Charon</h3>
-                    <p class="text-xs text-primary-blue font-semibold mt-1">Conseiller</p>
-                </div>
-                <!-- Membre 6: Colistière (Mock) -->
-                 <div class="text-center p-4 bg-bg-light rounded-xl shadow-lg border-t-4 border-primary-blue">
-                    <img src="https://placehold.co/100x100/1e40af/f9fafb?text=LS" alt="Portrait de Léa Simon" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover shadow-inner">
-                    <h3 class="text-md font-bold text-gray-900 leading-tight">Léa Simon</h3>
-                    <p class="text-xs text-primary-blue font-semibold mt-1">Conseillère</p>
-                </div>
-            </div>
+    <!-- Section Appel à l'Action (Lisibilité et style améliorés) -->
+    <section id="contact" class="py-16 bg-secondary-gold/90 text-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             
-            <div class="text-center mt-10">
-                <a href="#" class="btn-primary btn-outline-gold">Découvrir l'intégralité de la liste</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. SECTION D'APPEL À L'ACTION SECONDAIRE (Impliquer) -->
-    <section id="impliquer" class="py-20 bg-primary-blue">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-extrabold text-white mb-4">Rejoignez le Mouvement pour Cap d'Ail !</h2>
-            <p class="text-xl text-blue-200 mb-10 max-w-4xl mx-auto font-light">
-                Chaque voix, chaque aide, est essentielle. Ensemble, nous bâtirons l'avenir de notre commune.
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight text-black">
+                <span class="text-primary-blue">REJOIGNEZ</span> LE MOUVEMENT
+            </h2>
+            <!-- Texte de description en noir -->
+            <p class="text-xl mb-10 font-medium max-w-2xl mx-auto text-dark-secondary">
+                Vos idées comptent ! Engagez-vous pour l'avenir de Cap d'Ail. Que vous souhaitiez nous soutenir, proposer une idée ou participer activement.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <a href="#" class="btn-primary bg-secondary-gold text-primary-blue hover:bg-yellow-400">Devenir Bénévole</a>
-                <a href="#don" class="btn-primary bg-white text-primary-blue hover:bg-gray-100">Faire un Don</a>
+
+            <!-- Bouton en bleu STATIQUE et très visible -->
+            <a href="mailto:contact@capdail2026.fr" class="inline-flex items-center btn-blue text-xl px-10 py-4 rounded-xl shadow-2xl transition duration-300 transform hover:scale-105">
+                Nous Contacter
+            </a>
+
+            <div class="mt-12">
+                <!-- Texte d'appel en bleu foncé -->
+                <p class="text-xl font-semibold mb-4 text-primary-blue">Suivez-nous sur les réseaux :</p>
+                <div class="flex justify-center space-x-6">
+                    <!-- Icônes en bleu foncé -->
+                    <!-- Facebook SVG -->
+                    <a href="#" class="text-primary-blue hover:text-black transition duration-200">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12c0 5.084 3.738 9.31 8.636 9.947v-7.008H7.72V12h2.916V9.484c0-2.887 1.76-4.468 4.33-4.468 1.22 0 2.27.216 2.578.313v2.793h-1.66c-1.306 0-1.558.62-1.558 1.534V12h3.11l-.5 3.118h-2.61V22c5.084-.637 8.822-4.863 8.822-9.947C22 6.477 17.523 2 12 2z"/></svg>
+                    </a>
+                    <!-- Instagram SVG -->
+                    <a href="#" class="text-primary-blue hover:text-black transition duration-200">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.013 4.85.071 1.17.055 1.838.249 2.404.484.555.228.966.52 1.353.908.386.386.678.797.908 1.353.235.566.429 1.234.484 2.404.058 1.266.071 1.646.071 4.85s-.013 3.584-.071 4.85c-.055 1.17-.249 1.838-.484 2.404-.228.555-.52 1.014-.908 1.353-.386.386-.797.678-1.353.908-.566.235-1.234.429-.484 2.404-.058-1.266-.071-1.646-.071-4.85s.014-3.667.072-4.947c.06-1.27.284-2.073.577-2.828.297-.76.743-1.4 1.385-2.043.643-.643 1.284-1.088 2.043-1.385.755-.293 1.558-.517 2.828-.577 1.28-.058 1.689-.072 4.947-.072zM12 6.865c-2.85 0-5.135 2.285-5.135 5.135s2.285 5.135 5.135 5.135 5.135-2.285 5.135-5.135-2.285-5.135-5.135-5.135zm0 8.3c-1.745 0-3.165-1.42-3.165-3.165s1.42-3.165 3.165-3.165 3.165 1.42 3.165 3.165-1.42 3.165-3.165 3.165zm3.77-5.835c0 .548.445.993.993.993s.993-.445.993-.993-.445-.993-.993-.993-.993.445-.993.993z"/></svg>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 7. PIED DE PAGE (FOOTER) - Design moderne et sobre -->
-    <footer class="bg-gray-900 text-white py-10">
-        <div class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
-            <!-- Colonne 1: Branding et Mentions -->
-            <div class="col-span-2 md:col-span-1">
-                <span class="text-2xl font-extrabold text-secondary-gold">BECK 2026</span>
-                <p class="text-xs mt-3 text-gray-400">
-                    &copy; 2024 Campagne Xavier Beck. <br>
-                    Mandataire financier : [Nom et Adresse]
-                </p>
-            </div>
-
-            <!-- Colonne 2: Navigation -->
-            <div>
-                <h4 class="text-md font-bold mb-3 text-secondary-gold uppercase tracking-wider">Plan du Site</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li><a href="#parcours" class="hover:text-white transition">Bilan</a></li>
-                    <li><a href="#programme" class="hover:text-white transition">Programme</a></li>
-                    <li><a href="#liste-municipale" class="hover:text-white transition">L'Équipe</a></li>
-                </ul>
-            </div>
-
-            <!-- Colonne 3: Contact et Liens légaux -->
-            <div>
-                <h4 class="text-md font-bold mb-3 text-secondary-gold uppercase tracking-wider">Légal</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li><a href="#" class="hover:text-white transition">Mentions Légales</a></li>
-                    <li><a href="#" class="hover:text-white transition">Réglementation des Dons</a></li>
-                    <li><a href="#" class="hover:text-white transition">Contact Presse</a></li>
-                </ul>
-            </div>
-
-            <!-- Colonne 4: Réseaux Sociaux (Mise en évidence) -->
-            <div>
-                <h4 class="text-md font-bold mb-3 text-secondary-gold uppercase tracking-wider">Nous Suivre</h4>
-                <div class="flex space-x-4">
-                    <!-- Facebook -->
-                    <a href="https://facebook.com/XavierBeckCapdAil" target="_blank" class="text-gray-900 bg-secondary-gold rounded-full p-2 transition duration-150 hover:opacity-80">
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3 8h-2v2h2v3h-3v-3h-2V9h2V7c0-1.66 1.34-3 3-3h2v3h-2c-.55 0-1 .45-1 1v1h3l-.4 3z"/></svg>
-                    </a>
-                    <!-- Instagram -->
-                    <a href="https://instagram.com/XavierBeckCapdAil" target="_blank" class="text-gray-900 bg-secondary-gold rounded-full p-2 transition duration-150 hover:opacity-80">
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2c-3.1 0-3.56.01-4.8.07-1.25.06-2.14.24-2.88.53-.74.29-1.39.69-2.02 1.32-.63.63-1.03 1.28-1.32 2.02-.29.74-.47 1.63-.53 2.88C2.01 8.44 2 8.9 2 12s.01 3.56.07 4.8c.06 1.25.24 2.14.53 2.88.29.74.69 1.39 1.32 2.02.63.63 1.28 1.03 2.02 1.32.74.29 1.63.47 2.88.53C8.44 21.99 8.9 22 12 22s3.56-.01 4.8-.07c1.25-.06 2.14-.24 2.88-.53.74-.29 1.39-.69 2.02-1.32.63-.63 1.28-1.03 2.02-1.32.74-.29 1.63-.47 2.88-.53C21.99 15.56 22 15.1 22 12s-.01-3.56-.07-4.8c-.06-1.25-.24-2.14-.53-2.88-.29-.74-.69-1.39-1.32-2.02-.63-.63-1.28-1.03-2.02-1.32-.74-.29-1.63-.47-2.88-.53C15.56 2.01 15.1 2 12 2zm0 1.96c3.08 0 3.48.01 4.7.07 1.15.06 1.74.22 2.13.38.4.16.7.35.98.63.28.28.47.58.63.98.16.39.32.98.38 2.13.06 1.22.07 1.62.07 4.7s-.01 3.48-.07 4.7c-.06 1.15-.22 1.74-.38 2.13-.16.4-.35.7-.63.98-.28.28-.58.47-.98.63-.39.16-.98.32-2.13.38-1.22.06-1.62.07-4.7.07s-3.48-.01-4.7-.07c-1.15-.06-1.74-.22-2.13-.38-.4-.16-.7-.35-.98-.63-.28-.28-.58-.47-.98-.63-.39-.16-.98-.32-2.13-.38-1.22-.06-1.62-.07-4.7-.07s-3.48.01-4.7.07c-1.15.06-1.74.22-2.13.38.4-.16.7-.35.98-.63.28-.28.58-.47.98-.63.39-.16.98-.32 2.13-.38 1.22-.06 1.62-.07 4.7-.07zm0 2.87c-3.1 0-5.61 2.51-5.61 5.61s2.51 5.61 5.61 5.61 5.61-2.51 5.61-5.61-2.51-5.61-5.61-5.61zm0 9.25c-2.01 0-3.64-1.63-3.64-3.64s1.63-3.64 3.64-3.64 3.64 1.63 3.64 3.64-1.63 3.64-3.64 3.64zm5.02-9.28c.4 0 .73-.33.73-.73s-.33-.73-.73-.73-.73.33-.73.73.33.73.73.73z"/></svg>
-                    </a>
-                    <!-- Twitter / X -->
-                    <a href="https://twitter.com/XavierBeckCapdAil" target="_blank" class="text-gray-900 bg-secondary-gold rounded-full p-2 transition duration-150 hover:opacity-80">
-                         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.261 8.52 11.458H16.27l-6.843-8.686L3.924 22.75H0.44l7.653-8.777L0.864 2.25h3.58l5.404 7.822 6.758-7.822h2.072zM10.746 16.326l-1.636-1.398-6.046 5.822H6.974l4.125-4.704zM16.233 7.234L14.41 5.05H8.76l1.205 1.543 5.483 7.078 1.635-1.398L16.233 7.234z"/></svg>
-                    </a>
-                </div>
+    <!-- Pied de Page (Footer) -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2024 Xavier Beck - Cap d'Ail 2026. Tous droits réservés.</p>
+            <div class="mt-2 space-x-4">
+                <a href="#" class="hover:text-secondary-gold transition duration-150">Mentions Légales</a>
+                <a href="mailto:contact@capdail2026.fr" class="hover:text-secondary-gold transition duration-150">Contactez-nous</a>
             </div>
         </div>
     </footer>
 
+    <script>
+        /**
+         * Fonction pour styliser la première lettre de chaque mot dans un titre
+         * en alternant les couleurs primaire (bleu) et secondaire (or).
+         * @param {string} selector - Le sélecteur CSS du titre à modifier (ID).
+         * @param {string} color1 - La classe Tailwind pour la première couleur (e.g., 'text-primary-blue').
+         * @param {string} color2 - La classe Tailwind pour la deuxième couleur (e.g., 'text-secondary-gold').
+         */
+        function colorTitleInitials(selector, color1, color2) {
+            const element = document.getElementById(selector);
+            if (!element) return;
+
+            // Assure que le texte est en majuscules avant de le traiter
+            const text = element.textContent.trim().toUpperCase();
+            const words = text.split(/\s+/); // Gère les espaces multiples
+            let html = '';
+
+            words.forEach((word, index) => {
+                if (word.length === 0) return; 
+
+                // Détermine la couleur à utiliser (alternance)
+                const colorClass = index % 2 === 0 ? color1 : color2;
+                const secondColorClass = index % 2 === 0 ? color2 : color1; 
+
+                let styledWord = '';
+                
+                // Gestion des mots composés (Ex: JEAN-PIERRE)
+                if (word.includes('-')) {
+                    const parts = word.split('-');
+                    if (parts.length === 2) {
+                        // Style la première lettre de chaque partie du mot composé
+                        styledWord = `<span class="${colorClass}">${parts[0][0]}</span>${parts[0].substring(1)}-<span class="${secondColorClass}">${parts[1][0]}</span>${parts[1].substring(1)}`;
+                    } else {
+                         // Fallback
+                        styledWord = `<span class="${colorClass}">${word[0]}</span>${word.substring(1)}`;
+                    }
+                } else {
+                    // Cas normal (première lettre seule)
+                    styledWord = `<span class="${colorClass}">${word[0]}</span>${word.substring(1)}`;
+                }
+                
+                html += styledWord + ' ';
+            });
+
+            // Applique le nouveau HTML au titre
+            element.innerHTML = html.trim();
+        }
+
+        // Applique le style aux titres des sections principales
+        window.onload = function() {
+            const blue = 'text-primary-blue';
+            const gold = 'text-secondary-gold';
+            
+            // Nouveau: Application du style au titre principal de la section Héros (CAP D'AIL 2026)
+            // C A P D'A I L 2 0 2 6
+            colorTitleInitials('accueil-titre', blue, gold);
+
+            // Titres de section (H2)
+            colorTitleInitials('bilan-titre', blue, gold);
+            colorTitleInitials('equipe-titre', blue, gold);
+
+            // Titres des réalisations (H3)
+            colorTitleInitials('maison-medicale-titre', blue, gold);
+            colorTitleInitials('mandats-titre', blue, gold);
+            colorTitleInitials('environnement-titre', blue, gold);
+            colorTitleInitials('culture-sport-titre', blue, gold);
+            
+            // Applique le style aux noms de l'équipe
+            const teamMembers = document.querySelectorAll('#equipe .team-card p.font-semibold');
+            teamMembers.forEach(member => {
+                colorTitleInitials(member.parentElement.querySelector('p:nth-child(2)').id, blue, gold);
+            });
+            
+            // Note: Pour XAVIER BECK dans la section équipe, nous stylisons le H3 directement pour éviter l'ID dynamique
+            const maireH3 = document.querySelector('#equipe h3');
+            if(maireH3) {
+                 const text = maireH3.textContent.trim().toUpperCase();
+                 const words = text.split(/\s+/);
+                 if (words.length >= 2) {
+                    const html = `<span class="${blue}">${words[0][0]}</span>${words[0].substring(1)} <span class="${gold}">${words[1][0]}</span>${words[1].substring(1)}`;
+                    maireH3.innerHTML = html;
+                 }
+            }
+
+            // Ré-applique le style aux noms de l'équipe après le chargement initial
+            const teamCardNames = [
+                { id: 'ad1', name: 'Alain Dupont' },
+                { id: 'ad2', name: 'Carole Lefevre' },
+                { id: 'ad3', name: 'Patrick Garcia' },
+                { id: 'ad4', name: 'Sylvie Rive' },
+                { id: 'ad5', name: 'Thierry Bellon' },
+                { id: 'ad6', name: 'Marc Costa' },
+                { id: 'ad7', name: 'Christine Morel' },
+                { id: 'ad8', name: 'Julien Bonnet' },
+                { id: 'ad9', name: 'Delphine Zambernardini' }, // RÉEL
+                { id: 'ad10', name: 'Paul Vasseur' }
+            ];
+
+            // On va parcourir chaque carte pour forcer l'application du style (car on ne peut pas donner d'ID unique facilement aux <p> dans la boucle ci-dessus)
+            const teamCards = document.querySelectorAll('#equipe .team-card');
+            
+            teamCards.forEach((card, index) => {
+                if (teamCardNames[index]) {
+                    const nameElement = card.querySelector('.font-semibold');
+                    if (nameElement) {
+                        const { name } = teamCardNames[index];
+                        const words = name.toUpperCase().split(/\s+/);
+                        let html = '';
+
+                        words.forEach((word, wordIndex) => {
+                            const wordColor = wordIndex % 2 === 0 ? blue : gold;
+                             
+                            let styledWord = '';
+                            if (word.includes('-')) {
+                                const parts = word.split('-');
+                                const part1Color = wordIndex % 2 === 0 ? blue : gold;
+                                const part2Color = wordIndex % 2 === 0 ? gold : blue;
+
+                                styledWord = `<span class="${part1Color}">${parts[0][0]}</span>${parts[0].substring(1)}-<span class="${part2Color}">${parts[1][0]}</span>${parts[1].substring(1)}`;
+                            } else {
+                                styledWord = `<span class="${wordColor}">${word[0]}</span>${word.substring(1)}`;
+                            }
+                            
+                            html += styledWord + ' ';
+                        });
+                        
+                        nameElement.innerHTML = html.trim();
+                    }
+                }
+            });
+        };
+    </script>
 </body>
 </html>
